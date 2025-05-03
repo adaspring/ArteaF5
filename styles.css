@@ -496,7 +496,7 @@ body.dark-theme .accent-link:hover {
 }
 
 .carousel-thumbnails img {
-    scroll-snap-align: center;
+    scroll-snap-align: start;
     width: 60px;
     height: 60px;
     object-fit: cover;
