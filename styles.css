@@ -327,6 +327,15 @@ body.dark-theme .accent-link:hover {
     overflow: visible;
 }
 
+.carousel-title {
+  margin-top: -2rem; /* aligns with carousel-container’s top margin */
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding-left: 1rem; /* aligns with carousel content */
+  color: var(--text-color, #fff); /* match your theme */
+}
+
 .carousel {
     display: flex;
     align-items: center;
