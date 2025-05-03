@@ -18,7 +18,7 @@
     <meta name="description" content="Detailed view of Short Man Bust Nok Terracotta - 32cm ancient Nigerian sculpture with thermoluminescence certificate (1999) from French private collection">
     <meta name="keywords" content="Short Man Bust, Nok Terracotta details, ancient Nigerian art, thermoluminescence certified, African sculpture close-up, Nok culture artifacts">
     <meta property="og:title" content="Short Man Bust Nok Terracotta - Detailed View | ARTEAK">
-    <title>Short Man Bust Nok Terracotta - Detailed View | ARTEAK</title>
+    <title>Short Man Figure Nok Terracotta - Detailed View | ARTEAK</title>
     <meta property="og:url" content="https://artea.netlify.app/short-man-bust.html">
     
     <!-- meta different for each html page -->
@@ -159,7 +159,7 @@
 
     <main>
         <section class="grid-container">
-            <h2>Short Man Bust</h2>
+            <h2>Short Man Figure</h2>
         
                 <div class="grid-item">
             <img
@@ -297,5 +297,15 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="theme-toggle.js"></script>
+    <script>
+    // Détection de la langue du navigateur
+    const userLang = navigator.language || navigator.userLanguage;
+    
+    // Redirection pour les utilisateurs anglophones
+    if(userLang.startsWith('en') && window.location.pathname.includes('-fr.html')) {
+        window.location.href = 'index.html';
+    }
+    </script>
 </body>
 </html>
