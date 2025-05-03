@@ -328,12 +328,12 @@ body.dark-theme .accent-link:hover {
 }
 
 .carousel-title {
-  margin-top: -2rem; /* aligns with carousel-container’s top margin */
-  margin-bottom: 0.5rem;
-  font-size: 1.25rem;
-  font-weight: 600;
-  padding-left: 1rem; /* aligns with carousel content */
-  color: var(--text-color, #fff); /* match your theme */
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  font-weight: 300;
+  padding-left: 1.2rem; /* aligns with carousel content */
+  color: #665544 !important;
+  position: relative;
 }
 
 .carousel {
