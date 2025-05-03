@@ -1551,6 +1551,7 @@ body.dark-theme .lightbox-caption {
 
   .carousel-thumbnails {
     max-width: 220px;
+      gap: 20px;
   }
 
   .carousel-thumbnails img {
