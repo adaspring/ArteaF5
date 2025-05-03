@@ -1503,47 +1503,62 @@ body.dark-theme .lightbox-caption {
 }
 
 @media (min-width: 768px) {
-  .carousel-arrow.left {
-    left: 20px;
+  .carousel button:first-of-type {
+    left: 3px;
   }
 
-  .carousel-arrow.right {
-    right: 20px;
+  .carousel button:last-of-type {
+    right: 3px;
+  }
+
+  .carousel-thumbnails {
+    max-width: 210px;
   }
 
   .carousel-thumbnails img {
-    width: 80px;
-    height: 80px;
+    width: 63px;
+    height: 63px;
   }
 }
 
 @media (min-width: 1024px) {
-  .carousel-arrow.left {
-    left: 25px;
+  .carousel button:first-of-type {
+    left: 4px;
   }
 
-  .carousel-arrow.right {
-    right: 25px;
+  .carousel button:last-of-type {
+    right: 4px;
+  }
+
+  .carousel-thumbnails {
+    max-width: 215px;
   }
 
   .carousel-thumbnails img {
-    width: 90px;
-    height: 90px;
+    width: 66px;
+    height: 66px;
   }
 }
 
 @media (min-width: 1200px) {
-  .carousel-arrow.left {
-    left: 30px;
+  .carousel button:first-of-type {
+    left: 5px;
   }
 
-  .carousel-arrow.right {
-    right: 30px;
+  .carousel button:last-of-type {
+    right: 5px;
+  }
+
+  .carousel-thumbnails {
+    max-width: 220px;
   }
 
   .carousel-thumbnails img {
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
   }
 }
+
+
+
 
