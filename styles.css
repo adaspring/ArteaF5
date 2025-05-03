@@ -480,11 +480,12 @@ body.dark-theme .accent-link:hover {
 .carousel-thumbnails {
     display: flex;
     gap: 10px;
+    justify-content: center;
     margin: 15px auto 0;
-    padding: 0 20px;
+    padding: 0;
     overflow-x: auto;
     scroll-behavior: smooth;
-    max-width: 220px;
+    max-width: none;
     scroll-snap-type: x mandatory;
     -ms-overflow-style: none;
     scrollbar-width: none;
