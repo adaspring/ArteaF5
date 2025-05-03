@@ -1502,13 +1502,48 @@ body.dark-theme .lightbox-caption {
 
 }
 
-@media (min-width: 769px) {
-    .carousel button:first-of-type {
-        left: 10px;
-    }
-    
-    .carousel button:last-of-type {
-        right: 10px;
-    }
+@media (min-width: 768px) {
+  .carousel-arrow.left {
+    left: 20px;
+  }
+
+  .carousel-arrow.right {
+    right: 20px;
+  }
+
+  .carousel-thumbnails img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .carousel-arrow.left {
+    left: 25px;
+  }
+
+  .carousel-arrow.right {
+    right: 25px;
+  }
+
+  .carousel-thumbnails img {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .carousel-arrow.left {
+    left: 30px;
+  }
+
+  .carousel-arrow.right {
+    right: 30px;
+  }
+
+  .carousel-thumbnails img {
+    width: 100px;
+    height: 100px;
+  }
 }
 
