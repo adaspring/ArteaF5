@@ -1504,11 +1504,11 @@ body.dark-theme .lightbox-caption {
 
 @media (min-width: 768px) {
   .carousel button:first-of-type {
-    left: 3px;
+    left: -30px;
   }
 
   .carousel button:last-of-type {
-    right: 3px;
+    right: -30px;
   }
 
   .carousel-thumbnails {
@@ -1523,11 +1523,11 @@ body.dark-theme .lightbox-caption {
 
 @media (min-width: 1024px) {
   .carousel button:first-of-type {
-    left: 4px;
+    left: -40px;
   }
 
   .carousel button:last-of-type {
-    right: 4px;
+    right: -40px;
   }
 
   .carousel-thumbnails {
@@ -1542,11 +1542,11 @@ body.dark-theme .lightbox-caption {
 
 @media (min-width: 1200px) {
   .carousel button:first-of-type {
-    left: 5px;
+    left: -50px;
   }
 
   .carousel button:last-of-type {
-    right: 5px;
+    right: -50px;
   }
 
   .carousel-thumbnails {
