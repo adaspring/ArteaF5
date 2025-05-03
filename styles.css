@@ -331,7 +331,7 @@ body.dark-theme .accent-link:hover {
   margin-bottom: 0.8rem;
   font-size: 1.1rem;
   font-weight: 300;
-  padding-left: 1.2rem; /* aligns with carousel content */
+  /* padding-left: 1.2rem; aligns with carousel content */
   color: #665544 !important;
   position: relative;
 }
