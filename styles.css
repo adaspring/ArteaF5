@@ -1,0 +1,1504 @@
+/* styles.css - Minimalist Art Collection */
+/* ================================================== */
+/* Table of Contents */
+/* 1. Global Styles */
+/* 2. Header & Navigation */
+/* 3. Breadcrumb */
+/* 4. Typography */
+/* 5. Carousel System */
+/* 6. Grid System */
+/* 7. Content Sections */
+/* 8. Footer & Back to Top */
+/* 9. Lightbox System */
+/* 10. Animations */
+/* 11. Mobile Responsiveness */
+/* ================================================== */
+
+/* 1. Global Styles */
+/* ================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(135deg, #FFF5ED 0%, #F5EBE0 50%, #FFDAB9 100%);
+    color: #333;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+body.menu-open::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 90;
+    pointer-events: none;
+}
+
+a {
+    color: #665544;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #887766;
+    text-decoration: underline;
+}
+
+
+/* LANGUAGE */
+/* ================================================== */
+/* Ajoutez ceci à styles.css */
+.language-switcher {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 0.9em;
+}
+
+.language-switcher a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.3rem;
+    border-radius: 3px;
+    transition: color 0.3s ease;
+}
+
+.language-switcher a:hover {
+    background-color: var(--accent-color);
+}
+
+
+/* 2. Header & Navigation */
+/* ================================================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.hamburger-menu {
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+    z-index: 100;
+    pointer-events: auto;
+    color: #665544;
+}
+
+.hamburger-menu:hover {
+    transform: scale(1.1);
+}
+
+/* Flyout Menu */
+nav#flyout-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.95);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 200;
+    padding-top: 60px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    max-height: 100vh;
+    will-change: transform;
+    touch-action: pan-y;
+    pointer-events: auto;
+}
+
+nav#flyout-menu.open {
+    transform: translateX(0);
+}
+
+nav#flyout-menu li {
+    position: relative;
+    padding: 15px 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    list-style-type: none;
+}
+
+nav#flyout-menu > ul > li > a {
+    white-space: nowrap;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 40px !important;
+    color: #665544;
+}
+
+nav#flyout-menu .submenu {
+    padding-left: 20px;
+    list-style: none;
+    margin-top: 8px;
+    max-height: 0;
+    overflow-y: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+nav#flyout-menu .submenu.active {
+    max-height: 1000px;
+}
+
+nav#flyout-menu .submenu li {
+    border-bottom: none;
+    padding: 8px 0 !important;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+nav#flyout-menu .submenu.active li {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.submenu-arrow {
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.submenu-arrow.rotated {
+    transform: rotate(180deg) !important;
+}
+
+.menu-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #665544;
+    transition: transform 0.3s ease;
+    pointer-events: auto;
+}
+
+.menu-close-btn:hover {
+    transform: rotate(90deg);
+}
+
+header h1 a {
+    color: #665544;
+    text-decoration: none;
+}
+
+header h1 a:hover {
+    color: #887766;
+    text-decoration: none;
+}
+
+/* 3. Breadcrumb */
+/* ================================================== */
+.breadcrumb {
+    padding: 10px 5%;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 0.85rem;
+}
+
+.breadcrumb a {
+    color: #665544 !important;
+    text-decoration: none !important;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline !important;
+}
+
+.breadcrumb span {
+    color: #887766;
+}
+
+/* 4. Typography */
+/* ================================================== */
+h1, h2 {
+    color: #665544;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+    font-weight: 300;
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+    white-space: normal;
+    overflow-wrap: break-word;
+    max-width: 95%;
+    display: block;
+    width: 100%;
+}
+
+h2 {
+    max-width: 100% !important;
+    grid-column: 1 / -1;
+}
+
+h2 a, h3 a {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+h2 a:hover, h3 a:hover {
+    text-decoration: underline !important;
+}
+
+h3 {
+    color: #665544 !important;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(102, 85, 68, 0.2) !important;
+    letter-spacing: normal;
+    font-weight: 300;
+    display: inline-block;
+}
+
+h4 {
+    color: #665544 !important;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    font-weight: 300;
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+h4::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #CCD5AE;
+}
+
+
+.accent-link {
+    color: #B58463; /* Terracotta color for light mode */
+    transition: all 0.3s ease;
+    font-weight: 400;
+    position: relative;
+    display: inline-block;
+}
+
+.accent-link:hover {
+    color: #9D6B53;
+    transform: translateY(-1px);
+    text-decoration: none;
+}
+
+/* Dark theme override */
+body.dark-theme .accent-link {
+    color: #B58463; /* Light parchment color */
+}
+
+body.dark-theme .accent-link:hover {
+    color: #9D6B53;
+    text-decoration: none;
+}
+
+/* 5. Carousel System */
+/* ================================================== */
+.carousel-container {
+    margin: 60px auto;
+    width: 95%;
+    max-width: 1200px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    overflow: visible;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: auto;
+    min-height: 350px;
+    padding: 0 60px;
+    overflow: visible;
+}
+
+.carousel-images {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.carousel-images img {
+    display: none;
+    max-width: 95%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    margin: 0 auto;
+}
+
+.carousel-images img.active {
+    display: block;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.carousel button {
+    background: transparent;
+    border: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 5;
+    color: transparent;
+    overflow: visible;
+    transition: transform 0.3s ease;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Navigation arrows styling */
+.carousel button::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: rgba(204, 213, 174, 0.2);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 12px rgba(204, 213, 174, 0.5);
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.carousel button::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-style: solid;
+    border-width: 2px 0 0 2px;
+    border-color: #665544;
+    top: 50%;
+    left: 50%;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 0 2px rgba(102, 85, 68, 0.5));    
+}
+
+.carousel button:first-of-type {
+    left: -30px; /* Adjusted to stay inside the carousel */
+}
+
+.carousel button:last-of-type {
+    right: -30px; /* Adjusted to stay inside the carousel */
+}
+
+
+
+
+
+/* Add these specific arrow transformations back to your code */
+
+/* Left arrow positioning */
+.carousel button:first-of-type::before {
+    transform: translate(-35%, -50%) rotate(-45deg);
+}
+
+/* Right arrow positioning */
+.carousel button:last-of-type::before {
+    transform: translate(-65%, -50%) rotate(135deg);
+}
+
+/* Active states for the arrows */
+.carousel button:first-of-type:active::before {
+    transform: translate(-35%, -50%) rotate(-45deg) scale(0.95);
+}
+
+.carousel button:last-of-type:active::before {
+    transform: translate(-65%, -50%) rotate(135deg) scale(0.95);
+}
+
+/* Hover effects */
+.carousel button:hover::before {
+    filter: drop-shadow(0 0 4px rgba(102, 85, 68, 0.5));
+}
+
+/* Active states for the circular backgrounds */
+.carousel button:first-of-type:active::after,
+.carousel button:last-of-type:active::after {
+    box-shadow: 0 0 18px rgba(204, 213, 174, 0.5);
+    transform: translate(-50%, -50%) scale(0.95);
+    background: rgba(204, 213, 174, 0.4);
+}
+
+/* Hover effect for the circular background */
+.carousel button:hover::after {
+    background: rgba(204, 213, 174, 0.3);
+    box-shadow: 0 0 15px rgba(204, 213, 174, 0.5);
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+/* Thumbnail Carousel Styles */
+.carousel-thumbnails {
+    display: flex;
+    gap: 10px;
+    margin: 15px auto 0;
+    padding: 0 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    max-width: 220px;
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.carousel-thumbnails::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-thumbnails img {
+    scroll-snap-align: center;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.carousel-thumbnails img.active-thumb {
+    opacity: 1;
+    border-color: #D1B097;
+    transform: scale(1.05);
+}
+
+/* Indicators */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    position: relative;
+    z-index: 1;
+    margin-top: 0px;
+    padding-bottom: 25px;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    background: rgba(102, 85, 68, 0.3);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.indicator.active {
+    background: #665544;
+    transform: scale(1.3);
+}
+
+/* Dark Theme Overrides */
+body.dark-theme .carousel-thumbnails img.active-thumb {
+    border-color: #665544;
+}
+
+body.dark-theme .indicator {
+    background: rgba(204, 213, 174, 0.3);
+}
+
+body.dark-theme .indicator.active {
+    background: #CCD5AE;
+}
+
+body.dark-theme .carousel button::before {
+    border-color: #CCD5AE;
+}
+
+body.dark-theme .carousel button::after {
+    background: rgba(204, 213, 174, 0.1);
+    box-shadow: 0 0 12px rgba(204, 213, 174, 0.3);
+}
+
+
+
+
+
+.text-wrap-flex {
+  display: flex;
+  align-items: flex-start;
+  gap: 1em;
+  margin-bottom: 1.5em;
+  flex-wrap: wrap; /* allows better behavior on small screens */
+}
+
+.text-wrap-flex img.wrap-thumbnail {
+  flex-shrink: 0;
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.text-wrap-image {
+  margin: 1.5rem 0;
+  overflow: hidden; /* to clear the float */
+}
+
+.text-wrap-image img.float-image {
+  float: right;
+  width: 250px;
+  margin: 0 0 1rem 1rem;
+  border-radius: 6px;
+  shape-outside: margin-box;
+}
+.float-image {
+  float: left;
+  margin: 0 1rem 1rem 0;
+  max-width: 60%; /* or whatever size works best */
+}
+.grid-container.float-like {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: start;
+  margin-bottom: 2rem;
+}
+
+
+/* 6. Grid System */
+/* ================================================== */
+.grid-container {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding: 2rem 5%;
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    aspect-ratio: 1;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    animation: fadeIn 0.5s ease forwards;
+    max-width: 100%;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.grid-item:hover img {
+    opacity: 0.9;
+}
+
+
+/* Two image templates */
+/* Template 1: Large Centered Image */
+.grid-container.image-large {
+    grid-template-columns: 1fr;
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.grid-container.image-large .grid-item {
+    aspect-ratio: unset;
+    max-height: 80vh;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Template 2: Smaller Inline Image */
+.grid-container.image-inline {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 1rem 0;
+    float: left; /* or right */
+    shape-outside: margin-box;
+    padding: 0 1.5rem 1rem 0;
+}
+
+.grid-container.image-inline .grid-item {
+    aspect-ratio: unset;
+    max-height: 50vh;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Right-aligned alternative */
+.grid-container.image-inline.right {
+    float: right;
+    padding: 0 0 1rem 1.5rem;
+}
+
+/* Lightbox modification for single images remains same */
+#lightbox.single-image .lightbox-nav { display: none; }
+
+/* 7. Content Sections */
+/* ================================================== */
+.content-section {
+    margin: 40px auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 4px;
+    color: #333;
+}
+
+#about.content-section p {
+    font-size: 0.8rem; /* Text size */
+    text-align: justify; /* Justification */
+    line-height: 1.7; /* Line spacing */
+    hyphens: auto; /* Better line breaks */
+    max-width: 650px; /* Text column width */
+    margin: 0 auto 1rem; /* Center align */
+}
+
+#about p:last-child {
+    margin-bottom: 1rem; /* Ensure last paragraph has normal spacing */
+}
+
+
+.subsection {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 1000px;
+    margin-bottom: 2.5rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+}
+
+.sub-subsection {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    contain: content;
+}
+
+.subsection p,
+.sub-subsection p,
+.subsection .lecture-content p,
+.sub-subsection .hidden-content p {
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    margin-bottom: 0.8rem;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.6;
+    color: #444;
+    width: 100%; /* NEW */
+    max-width: 100%; /* NEW */
+    overflow-wrap: break-word; /* NEW */
+text-align: justify; /* Justification */
+}
+
+.subsection a {
+hyphens: auto;
+    -webkit-hyphens: auto;
+    margin-bottom: 0.8rem;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.6;
+    color: #444;
+    width: 100%; /* NEW */
+    max-width: 100%; /* NEW */
+    overflow-wrap: break-word; /* NEW */
+text-align: justify; /* Justification */
+}
+    
+
+.subsection h3,
+.sub-subsection h4 {
+    text-align: left;
+}
+
+.category-description {
+    font-size: 0.8rem;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    padding: 15px 20px;
+    line-height: 1.0;
+    margin: 15px auto 0;
+    max-width: 95%;
+}
+
+.category-description {
+    margin-top: 10px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #444;
+    text-align: justify;
+}
+
+.video-container {
+    margin: 2rem 0;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    background: #fafafa;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    font-size: 0.9em;
+    color: #665544;
+}
+
+.credit {
+    font-style: italic;
+    color: #887766;
+    margin-top: 1rem;
+    font-size: 0.95em;
+}
+
+.lecture-content p {
+    margin-top: 20px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-align: justify;
+    color: #444;
+    font-size: 0.8rem;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    line-height: 1.0;
+}
+
+.lead {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.hidden-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.hidden-content.visible {
+    display: block;
+    opacity: 1;
+    max-height: 1000vh;
+}
+
+.hidden-content p:first-of-type {
+    margin-top: 0rem;
+}
+
+.subsection p:has(+ .hidden-content) {
+    margin-bottom: 0;
+}
+
+.read-more {
+    background: transparent;
+    border: none;
+    color: #665544;
+    cursor: pointer;
+    padding: 0.25em 0.5em;
+    margin-left: 0em;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+
+.read-more:hover {
+    color: #887766;
+    text-decoration: underline;
+}
+
+/* 8. Footer & Back to Top */
+/* ================================================== */
+footer {
+    margin-top: 10px;
+    padding: 50px 5%;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    color: #665544;
+}
+
+footer h2 {
+    margin-bottom: -0.5rem; /* Reduce space below heading */
+}
+
+footer a {
+    color: #665544;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    transform: translateY(-2px);
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(204, 213, 174, 0.8);
+    color: #665544;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 99;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+}
+
+.social-container {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    width: 100%;
+    margin: 1.0rem 0; /* 1.5rem top/bottom, 0 left/right */  
+}
+
+.social-icon {
+    display: inline-block;
+    font-size: 2rem;
+    color: #665544; /* Base color */
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    text-decoration: none;
+}
+
+/* Specific colors */
+.fa-instagram:hover { color: #E4405F; } /* Instagram pink */
+.fa-envelope:hover { color: #EA4335; } /* Gmail red */
+.fa-whatsapp:hover {color: #25D366; } /* WhatsApp brand green */
+
+
+
+/* 9. Lightbox System */
+/* ================================================== */
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 245, 237, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+#lightbox.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.lightbox-image {
+    max-height: 80vh;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.close-lightbox {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: #665544;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.close-lightbox:hover {
+    transform: scale(1.2);
+}
+
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+/* Lightbox Arrows - Match Carousel Style */
+.lightbox-prev,
+.lightbox-next {
+    background: transparent !important;
+    border: none !important;
+    width: 50px !important;
+    height: 50px !important;
+    margin: 0 20px !important;
+    box-shadow: none !important;
+    position: relative !important;
+    transform: none !important;
+    top: auto !important;
+    margin: 0 !important;
+    color: transparent !important;
+    font-size: 0 !important;
+}
+
+.lightbox-prev {
+    left: 5px !important;
+}
+
+.lightbox-next {
+    right: 5px !important;
+    left: auto !important; /* Reset default positioning */
+}
+
+/* Create chevron using border technique */
+.lightbox-prev::before,
+.lightbox-next::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-style: solid;
+    border-width: 4px 0 0 4px;
+    border-color: #665544;
+    top: 50%;
+    left: 50%;
+    transition: border-color 0.3s ease, filter 0.3s ease;
+    filter: drop-shadow(2px 2px 2px rgba(102, 85, 68, 0.2));
+}
+
+/* Left arrow */
+.lightbox-prev::before {
+    transform: translate(-30%, -50%) rotate(-45deg);
+}
+
+/* Right arrow */
+.lightbox-next::before {
+    transform: translate(-70%, -50%) rotate(135deg);
+}
+
+/* Hover states */
+.lightbox-prev:hover::before,
+.lightbox-next:hover::before {
+    border-color: rgba(102, 85, 68, 0.8);
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3));
+}
+
+/* Active states */
+.lightbox-prev:active::before,
+.lightbox-next:active::before {
+    border-color: #887766;
+    transform: 
+        translate(var(--tx, -40%), -50%) 
+        rotate(var(--rot, -45deg)) 
+        scale(0.9);
+    filter: drop-shadow(0.5px 0.5px 1px rgba(0, 0, 0, 0.2));
+}
+
+.lightbox-next:active::before {
+    --tx: -60%;
+    --rot: 135deg;
+}
+
+/* Remove original arrow text */
+.lightbox-prev span,
+.lightbox-next span {
+    display: none !important;
+}
+
+.lightbox-caption {
+    color: #665544;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.1rem;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 10. Animations */
+/* ================================================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Dark Theme Override for Minimalist Art Collection */
+/* This CSS should be applied conditionally when dark mode is active */
+
+body.dark-theme {
+    background: linear-gradient(135deg, #1A1A1A 0%, #2A2A2A 50%, #333333 100%);
+    color: #E0E0E0;
+}
+
+body.dark-theme a {
+    color: #CCD5AE;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+body.dark-theme a:hover {
+    color: #E9EDC9;
+    text-decoration: underline;
+}
+
+/* Header & Navigation */
+body.dark-theme header {
+    background-color: rgba(20, 20, 20, 0.8);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-theme .hamburger-menu {
+    color: #CCD5AE;
+}
+
+body.dark-theme nav#flyout-menu {
+    background-color: rgba(30, 30, 30, 0.95);
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme nav#flyout-menu li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+body.dark-theme nav#flyout-menu > ul > li > a {
+    color: #CCD5AE;
+}
+
+body.dark-theme .menu-close-btn {
+    color: #CCD5AE;
+}
+
+body.dark-theme header h1 a {
+    color: #CCD5AE;
+}
+
+body.dark-theme header h1 a:hover {
+    color: #E9EDC9;
+}
+
+/* Breadcrumb */
+body.dark-theme .breadcrumb {
+    background-color: rgba(20, 20, 20, 0.5);
+}
+
+body.dark-theme .breadcrumb a {
+    color: #CCD5AE !important;
+}
+
+body.dark-theme .breadcrumb span {
+    color: #E9EDC9;
+}
+
+/* Typography */
+body.dark-theme h1, 
+body.dark-theme h2 {
+    color: #CCD5AE;
+}
+
+body.dark-theme h3 {
+    color: #CCD5AE !important;
+    border-bottom: 1px solid rgba(204, 213, 174, 0.2) !important;
+}
+
+body.dark-theme h4 {
+    color: #CCD5AE !important;
+}
+
+body.dark-theme h4::before {
+    color: #FFDAB9;
+}
+
+/* Carousel System */
+body.dark-theme .carousel-container {
+    background-color: rgba(30, 30, 30, 0.7);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-theme .carousel button::before {
+    border-color: #CCD5AE;
+}
+
+body.dark-theme .carousel button::after {
+    background: rgba(204, 213, 174, 0.1);
+    box-shadow: 0 0 12px rgba(204, 213, 174, 0.3);
+}
+
+body.dark-theme .carousel button:hover::after {
+    background: rgba(204, 213, 174, 0.2);
+    box-shadow: 0 0 15px rgba(204, 213, 174, 0.3);
+}
+
+body.dark-theme .carousel button:active::after {
+    box-shadow: 0 0 18px rgba(204, 213, 174, 0.3);
+    background: rgba(204, 213, 174, 0.3);
+}
+
+body.dark-theme .indicator {
+    background-color: rgba(204, 213, 174, 0.3);
+}
+
+body.dark-theme .indicator.active {
+    background-color: #CCD5AE;
+}
+
+body.dark-theme #highlight-img {
+    background: rgba(30, 30, 30, 0.5);
+    border: 1px solid rgba(204, 213, 174, 0.3);
+}
+
+body.dark-theme #nok-highlight-carousel button {
+    color: #CCD5AE;
+}
+
+body.dark-theme #nok-highlight-carousel button:hover {
+    color: #E9EDC9;
+}
+
+/* Grid System */
+body.dark-theme .grid-item {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    background: rgba(30, 30, 30, 0.5);
+}
+
+body.dark-theme .grid-item:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Content Sections */
+body.dark-theme .content-section {
+    background-color: rgba(30, 30, 30, 0.7);
+    color: #E0E0E0;
+}
+
+body.dark-theme .subsection {
+    background: rgba(25, 25, 25, 0.5);
+}
+
+body.dark-theme .sub-subsection {
+    background: rgba(20, 20, 20, 0.3);
+}
+
+body.dark-theme .subsection p,
+body.dark-theme .sub-subsection p,
+body.dark-theme .subsection .lecture-content p,
+body.dark-theme .sub-subsection .hidden-content p {
+    color: #CCCCCC;
+}
+
+body.dark-theme .category-description {
+    color: #CCD5AE;
+}
+
+body.dark-theme .video-container {
+    background: rgba(25, 25, 25, 0.5);
+}
+
+body.dark-theme .video-wrapper {
+    background: #222222;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-theme .video-meta {
+    color: #CCD5AE;
+}
+
+body.dark-theme .credit {
+    color: #E9EDC9;
+}
+
+body.dark-theme .lecture-content p {
+    color: #CCCCCC;
+}
+
+body.dark-theme .lead {
+    color: #E0E0E0;
+}
+
+body.dark-theme .read-more {
+    color: #CCD5AE;
+}
+
+body.dark-theme .read-more:hover {
+    color: #E9EDC9;
+}
+
+/* Footer & Back to Top */
+body.dark-theme footer {
+    background-color: rgba(20, 20, 20, 0.8);
+    color: #CCD5AE;
+}
+
+body.dark-theme footer a {
+    color: #CCD5AE;
+}
+
+body.dark-theme .back-to-top {
+    background-color: rgba(204, 213, 174, 0.4);
+    color: #1A1A1A;
+}
+
+/* Lightbox System */
+body.dark-theme #lightbox {
+    background-color: rgba(15, 15, 15, 0.95);
+}
+
+body.dark-theme .lightbox-image {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .close-lightbox {
+    color: #CCD5AE;
+}
+
+body.dark-theme .lightbox-prev::before,
+body.dark-theme .lightbox-next::before {
+    border-color: #CCD5AE;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
+}
+
+body.dark-theme .lightbox-prev:hover::before,
+body.dark-theme .lightbox-next:hover::before {
+    border-color: #E9EDC9;
+}
+
+body.dark-theme .lightbox-caption {
+    color: #CCD5AE;
+}
+
+
+
+
+
+
+
+
+
+
+/* 11. Mobile Responsiveness */
+/* ================================================== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .carousel {
+        min-height: 280px;
+        padding: 0 40px; /* Less padding on smaller screens */
+    }
+
+    .carousel-images {
+        height: 400px;
+    }
+    
+    .carousel button:first-of-type {
+        left: -25px;
+    }
+    
+    .carousel button:last-of-type {
+        right: -25px;
+    }
+
+    nav#flyout-menu {
+        width: 200px;
+    }
+    nav#flyout-menu li {
+        padding: 12px 25px;
+    }
+    
+    .submenu-arrow {
+        right: 15px !important;
+    }
+    
+    .grid-container {
+        grid-template-columns: repeat(2, minmax(150px, 1fr));
+        gap: 20px;
+        padding: 1.5rem 5%;
+    }
+
+    h1, h2, h3 {
+        font-size: 1.4rem;
+        line-height: 1.3;
+    }
+
+    h3 {
+        font-size: 1.3rem; /* Slightly smaller than h1/h2 */
+        margin-bottom: 1.2rem;
+        padding-bottom: 0.6rem;
+    }
+    
+    .video-container {
+        margin: 1rem 0;
+        padding: 10px;
+    }
+    
+    .category-description {
+        font-size: 0.85rem;
+        padding: 10px 15px;
+    }
+
+    #nok-highlight-carousel .carousel-slide {
+        max-width: 300px;
+    }
+    
+    #highlight-img {
+        aspect-ratio: 3/4;
+    }  
+
+.social-container {
+        gap: 20px;
+    }
+.social-icon {
+        font-size: 1.7rem;
+    }
+
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.3rem;
+    }
+
+    .carousel {
+        min-height: 230px;
+        padding: 0 30px; /* Even less padding on mobile */
+    }
+
+    .carousel-images {
+        height: 300px;
+    }
+    
+    .carousel button:first-of-type {
+        left: -5px;
+    }
+    
+    .carousel button:last-of-type {
+        right: -5px;
+    }
+
+    nav#flyout-menu {
+        width: 180px;
+    }
+
+    .category-description {
+        font-size: 0.8rem; /* Even smaller for phones */
+        line-height: 1.3; /* Tighter spacing */
+        hyphens: manual; /* Better control on tiny screens */
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, minmax(120px, 1fr));
+        gap: 15px;
+        padding: 1rem 5%;
+    }
+
+    h1, h2, h3 {
+        font-size: 1.2rem;
+        letter-spacing: 0.5px;
+    }
+
+    h3 {
+        font-size: 1.1rem; /* Maintain hierarchy */
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        display: block; /* Full width on smallest screens */
+    }
+    
+    .video-wrapper {
+        border-radius: 4px;
+    }
+    .social-container {
+        gap: 15px;
+    }
+
+}
+
+@media (min-width: 769px) {
+    .carousel button:first-of-type {
+        left: 10px;
+    }
+    
+    .carousel button:last-of-type {
+        right: 10px;
+    }
+}
+
