@@ -1504,11 +1504,11 @@ body.dark-theme .lightbox-caption {
 
 @media (min-width: 768px) {
   .carousel button:first-of-type {
-    left: -30px;
+    left: 100px;
   }
 
   .carousel button:last-of-type {
-    right: -30px;
+    right: 100px;
   }
 
   .carousel-thumbnails {
