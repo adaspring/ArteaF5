@@ -62,10 +62,16 @@ a:hover {
 /* ================================================== */
 /* Ajoutez ceci à styles.css */
 .language-switcher {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
+    display: flex;
+    align-items: center;
     font-size: 0.9em;
+    gap: 0.3rem;
+    position: static; /* Removed absolute positioning causing alignment issues */
+}
+
+language-switcher a,
+.hamburger-menu {
+    background: none; /* Explicitly remove any inherited background */
 }
 
 .language-switcher a {
@@ -88,9 +94,8 @@ a:hover {
 .header-controls {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 1rem;
     position: relative;
-    justify-content: flex-end;
 }
 
 
@@ -120,6 +125,9 @@ header {
 .hamburger-menu:hover {
     transform: scale(1.1);
 }
+
+
+
 
 /* Flyout Menu */
 nav#flyout-menu {
