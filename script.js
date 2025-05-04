@@ -636,38 +636,77 @@ if (currentTheme === 'dark') {
 
 
 // ======================
-// Language
+// Language redirection script
 // ======================
 
-document.addEventListener('DOMContentLoaded', function () {
-    const userLang = navigator.language || navigator.userLanguage;  // Get user language
 
-    // Define the language mappings
-    const languageMappings = {
-        'en': '-en.html',
-        'fr': '-fr.html',
-        'es': '-es.html',
-        'de': '-de.html',
-        'zh-CN': '-zh-CN.html',
-        'zh-TW': '-zh-TW.html'
-    };
 
-    const currentPath = window.location.pathname;  // Get current path
-
-    // Get the current page name (e.g., name.html)
-    const pageName = currentPath.split('/').pop();
-
-    // Check if the page is not already a language-specific page (e.g., name-fr.html, name-en.html)
-    if (pageName && !Object.values(languageMappings).some(lang => currentPath.includes(lang))) {
-        // Loop through the languageMappings and redirect based on the user's language
-        Object.keys(languageMappings).forEach(lang => {
-            if (userLang.startsWith(lang)) {
-                const redirectTo = currentPath.replace(pageName, pageName.replace('.html', languageMappings[lang]));
-                window.location.replace(redirectTo);  // Perform the redirection to the correct language page
+document.addEventListener('DOMContentLoaded', function() {
+    // Only perform redirection if we haven't already done it in this session
+    if (sessionStorage.getItem('redirected') !== 'true') {
+        const userLang = navigator.language || navigator.userLanguage;
+        const primaryLang = userLang.split('-')[0]; // Get primary language code (e.g., "en" from "en-US")
+        
+        // Define the language mappings
+        const languageMappings = {
+            'en': '',          // English is default with no suffix
+            'fr': '-fr.html',
+            'es': '-es.html',
+            'de': '-de.html',
+            'zh': '-zh-CN.html', // Default Chinese (simplified)
+            'zh-CN': '-zh-CN.html',
+            'zh-TW': '-zh-TW.html'
+        };
+        
+        // Get current path and page name
+        const currentPath = window.location.pathname;
+        const pageName = currentPath.split('/').pop();
+        
+        // Check if this is already a language-specific page
+        const isLanguageSpecificPage = Object.values(languageMappings)
+            .filter(suffix => suffix !== '') // Exclude the English empty suffix
+            .some(suffix => pageName.includes(suffix));
+        
+        // Only redirect if:
+        // 1. User's language is not English
+        // 2. We're on a default (English) page
+        // 3. We're not on a language-specific page already
+        if (primaryLang !== 'en' && !isLanguageSpecificPage) {
+            // Get the appropriate language suffix based on user's browser language
+            let targetSuffix = languageMappings[userLang] || languageMappings[primaryLang];
+            
+            // If no specific mapping exists for the user's language, default to English (no redirection)
+            if (!targetSuffix) {
+                // Mark as redirected to prevent future attempts and exit
+                sessionStorage.setItem('redirected', 'true');
+                return;
             }
-        });
+            
+            // Create the new URL with language suffix
+            // For index.html or similar, we need special handling
+            let newPath;
+            if (pageName === 'index.html' || pageName === '') {
+                // For the index page
+                const baseDir = currentPath.substring(0, currentPath.lastIndexOf('/') + 1);
+                const baseName = 'index';
+                newPath = baseDir + baseName + targetSuffix;
+            } else {
+                // For other pages, replace .html with the language suffix
+                newPath = currentPath.replace('.html', targetSuffix);
+            }
+            
+            // Mark as redirected to prevent future attempts
+            sessionStorage.setItem('redirected', 'true');
+            
+            // Perform the redirection
+            window.location.replace(newPath);
+        } else {
+            // Mark as "handled" even if no redirection was needed
+            sessionStorage.setItem('redirected', 'true');
+        }
     }
 });
+
 
 // ======================
 // Unified Initialization
