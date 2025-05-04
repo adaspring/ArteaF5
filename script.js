@@ -515,19 +515,6 @@ document.addEventListener('DOMContentLoaded', function() {
             color: #CCD5AE;
         }
 
-         body #theme-toggle-container .theme-toggle {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: rgba(204, 213, 174, 0.8); /* Keep your original styling */
-    z-index: 1; /* Ensure proper stacking */
-}
-
-/* Ensure theme toggle container doesn't affect other elements */
-#theme-toggle-container {
-    position: fixed; /* Keep it fixed as in your original code */
-    z-index: 101;
-}
         
         .theme-toggle {
             width: 40px;
