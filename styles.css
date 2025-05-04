@@ -81,11 +81,16 @@ a:hover {
     background-color: var(--accent-color);
 }
 
+.theme-toggle:hover {
+    background-color: var(--accent-color); 
+}
+
 .header-controls {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
     position: relative;
+    justify-content: flex-end;
 }
 
 
