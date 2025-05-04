@@ -349,6 +349,10 @@ body.dark-theme .custom-link:hover {
     text-decoration: underline;
 }
 
+right-aligned {
+  text-align: right !important;
+}
+
 
 /* 5. Carousel System */
 /* ================================================== */
