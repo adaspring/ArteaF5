@@ -69,10 +69,6 @@ a:hover {
     position: static; /* Removed absolute positioning causing alignment issues */
 }
 
-language-switcher a,
-.hamburger-menu {
-    background: none; /* Explicitly remove any inherited background */
-}
 
 .language-switcher a {
     color: var(--text-color);
