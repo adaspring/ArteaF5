@@ -656,32 +656,3 @@ document.addEventListener('DOMContentLoaded', () => {
     initLoadingStates();
     setupIndependentScrolling();
 });
-
-
-// ======================
-// Language System
-// ======================
-
-// ======================
-// Language Redirect (Standalone Safe Insert)
-// ======================
-(function() {
-    const userLang = navigator.language || navigator.userLanguage;
-    const langCode = userLang.split('-')[0];
-
-    const languageMap = {
-        en: 'index.html',
-        fr: 'index-fr.html',
-        es: 'index-es.html',
-        de: 'index-de.html',
-        zh: 'index-zh-CN.html'
-    };
-
-    const currentPage = window.location.pathname.split('/').pop();
-    const targetPage = languageMap[langCode];
-
-    if (targetPage && currentPage !== targetPage) {
-        window.location.href = targetPage;
-    }
-})();
-
