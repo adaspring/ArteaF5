@@ -328,6 +328,34 @@ body.dark-theme .accent-link:hover {
     text-decoration: none;
 }
 
+/* ----- Light Theme (Default) ----- */
+.custom-link {
+    color: #B58463 !important; /* Terracotta */
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+.custom-link:hover {
+    color: #9D6B53 !important; /* Slightly darker terracotta */
+    text-decoration: underline;
+    transform: translateY(-1px); /* Optional: subtle lift effect */
+}
+
+/* ----- Dark Theme Override ----- */
+body.dark-theme .custom-link {
+    color: #CCD5AE !important; /* Soft green-beige */
+}
+body.dark-theme .custom-link:hover {
+    color: #E9EDC9 !important; /* Lighter green-beige */
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
 /* 5. Carousel System */
 /* ================================================== */
 .carousel-container {
