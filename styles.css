@@ -1462,6 +1462,10 @@ body.dark-theme .lightbox-caption {
         font-size: 1.7rem;
     }
 
+header-controls {
+        gap: 0.8rem;
+}
+   
 }
 
 @media (max-width: 480px) {
