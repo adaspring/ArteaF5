@@ -634,33 +634,40 @@ if (currentTheme === 'dark') {
     }
 });
 
-// ======================
-// Language System
-// ======================
 
 // ======================
-// Language Redirect (Standalone Safe Insert)
+// Language
 // ======================
-(function() {
-    const userLang = navigator.language || navigator.userLanguage;
-    const langCode = userLang.split('-')[0];
 
-    const languageMap = {
-        en: 'index.html',
-        fr: 'index-fr.html',
-        es: 'index-es.html',
-        de: 'index-de.html',
-        zh: 'index-zh-CN.html'
+document.addEventListener('DOMContentLoaded', function () {
+    const userLang = navigator.language || navigator.userLanguage;  // Get user language
+
+    // Define the language mappings
+    const languageMappings = {
+        'en': '-en.html',
+        'fr': '-fr.html',
+        'es': '-es.html',
+        'de': '-de.html',
+        'zh-CN': '-zh-CN.html',
+        'zh-TW': '-zh-TW.html'
     };
 
-    const currentPage = window.location.pathname.split('/').pop();
-    const targetPage = languageMap[langCode];
+    const currentPath = window.location.pathname;  // Get current path
 
-    if (targetPage && currentPage !== targetPage) {
-        window.location.href = targetPage;
+    // Get the current page name (e.g., name.html)
+    const pageName = currentPath.split('/').pop();
+
+    // Check if the page is not already a language-specific page (e.g., name-fr.html, name-en.html)
+    if (pageName && !Object.values(languageMappings).some(lang => currentPath.includes(lang))) {
+        // Loop through the languageMappings and redirect based on the user's language
+        Object.keys(languageMappings).forEach(lang => {
+            if (userLang.startsWith(lang)) {
+                const redirectTo = currentPath.replace(pageName, pageName.replace('.html', languageMappings[lang]));
+                window.location.replace(redirectTo);  // Perform the redirection to the correct language page
+            }
+        });
     }
-})();
-
+});
 
 // ======================
 // Unified Initialization
