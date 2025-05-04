@@ -636,77 +636,113 @@ if (currentTheme === 'dark') {
 
 
 // ======================
-// Language redirection script
+// Language redirection script with enhanced browser compatibility
 // ======================
 
 
-
 document.addEventListener('DOMContentLoaded', function() {
-    // Only perform redirection if we haven't already done it in this session
-    if (sessionStorage.getItem('redirected') !== 'true') {
-        const userLang = navigator.language || navigator.userLanguage;
-        const primaryLang = userLang.split('-')[0]; // Get primary language code (e.g., "en" from "en-US")
-        
-        // Define the language mappings
-        const languageMappings = {
-            'en': '',          // English is default with no suffix
-            'fr': '-fr.html',
-            'es': '-es.html',
-            'de': '-de.html',
-            'zh': '-zh-CN.html', // Default Chinese (simplified)
-            'zh-CN': '-zh-CN.html',
-            'zh-TW': '-zh-TW.html'
-        };
-        
-        // Get current path and page name
-        const currentPath = window.location.pathname;
-        const pageName = currentPath.split('/').pop();
-        
-        // Check if this is already a language-specific page
-        const isLanguageSpecificPage = Object.values(languageMappings)
-            .filter(suffix => suffix !== '') // Exclude the English empty suffix
-            .some(suffix => pageName.includes(suffix));
-        
-        // Only redirect if:
-        // 1. User's language is not English
-        // 2. We're on a default (English) page
-        // 3. We're not on a language-specific page already
-        if (primaryLang !== 'en' && !isLanguageSpecificPage) {
-            // Get the appropriate language suffix based on user's browser language
-            let targetSuffix = languageMappings[userLang] || languageMappings[primaryLang];
-            
-            // If no specific mapping exists for the user's language, default to English (no redirection)
-            if (!targetSuffix) {
-                // Mark as redirected to prevent future attempts and exit
-                sessionStorage.setItem('redirected', 'true');
-                return;
-            }
-            
-            // Create the new URL with language suffix
-            // For index.html or similar, we need special handling
-            let newPath;
-            if (pageName === 'index.html' || pageName === '') {
-                // For the index page
-                const baseDir = currentPath.substring(0, currentPath.lastIndexOf('/') + 1);
-                const baseName = 'index';
-                newPath = baseDir + baseName + targetSuffix;
-            } else {
-                // For other pages, replace .html with the language suffix
-                newPath = currentPath.replace('.html', targetSuffix);
-            }
-            
-            // Mark as redirected to prevent future attempts
-            sessionStorage.setItem('redirected', 'true');
-            
-            // Perform the redirection
-            window.location.replace(newPath);
-        } else {
-            // Mark as "handled" even if no redirection was needed
+    // Set a safety timeout to prevent any hanging redirects
+    const safetyTimeout = setTimeout(function() {
+        if (!sessionStorage.getItem('redirected')) {
+            console.log("Safety timeout reached for language redirect");
             sessionStorage.setItem('redirected', 'true');
         }
+    }, 2000); // 2 seconds timeout
+    
+    // Only perform redirection if we haven't already done it in this session
+    if (sessionStorage.getItem('redirected') !== 'true') {
+        try {
+            // Get user language with multiple fallbacks for maximum compatibility
+            const userLang = navigator.language || navigator.userLanguage || navigator.browserLanguage || navigator.systemLanguage || 'en';
+            const primaryLang = userLang.split('-')[0].toLowerCase(); // Get primary language code and normalize (e.g., "en" from "en-US")
+            
+            // Define the language mappings
+            const languageMappings = {
+                'en': '',          // English is default with no suffix
+                'fr': '-fr.html',
+                'es': '-es.html',
+                'de': '-de.html',
+                'zh': '-zh-CN.html', // Default Chinese (simplified)
+                'zh-cn': '-zh-CN.html',
+                'zh-tw': '-zh-TW.html'
+            };
+            
+            // Get current path and page name
+            const currentPath = window.location.pathname;
+            const pageName = currentPath.split('/').pop();
+            
+            // Check if this is already a language-specific page
+            const isLanguageSpecificPage = Object.values(languageMappings)
+                .filter(suffix => suffix !== '') // Exclude the English empty suffix
+                .some(suffix => pageName.includes(suffix));
+            
+            // Only redirect if:
+            // 1. User's language is not English
+            // 2. We're on a default (English) page
+            // 3. We're not on a language-specific page already
+            if (primaryLang !== 'en' && !isLanguageSpecificPage) {
+                // Get the appropriate language suffix based on user's browser language
+                // Try exact match first, then primary language
+                let targetSuffix = languageMappings[userLang.toLowerCase()] || languageMappings[primaryLang];
+                
+                // If no specific mapping exists for the user's language, default to English (no redirection)
+                if (!targetSuffix) {
+                    // Mark as redirected to prevent future attempts and exit
+                    sessionStorage.setItem('redirected', 'true');
+                    clearTimeout(safetyTimeout);
+                    return;
+                }
+                
+                // Create the new URL with language suffix
+                // For index.html or similar, we need special handling
+                let newPath;
+                if (pageName === 'index.html' || pageName === '' || pageName === '/') {
+                    // For the index page
+                    const baseDir = currentPath.substring(0, currentPath.lastIndexOf('/') + 1);
+                    const baseName = 'index';
+                    newPath = baseDir + baseName + targetSuffix;
+                } else {
+                    // For other pages, replace .html with the language suffix
+                    newPath = currentPath.replace('.html', targetSuffix);
+                }
+                
+                // Mark as redirected to prevent future attempts
+                sessionStorage.setItem('redirected', 'true');
+                
+                // Clear the safety timeout since we're proceeding with a controlled redirect
+                clearTimeout(safetyTimeout);
+                
+                // Check if the target file exists before redirecting (optional but safer)
+                const http = new XMLHttpRequest();
+                http.open('HEAD', newPath, false);
+                try {
+                    http.send();
+                    if (http.status !== 404) {
+                        // File exists, perform the redirection
+                        window.location.replace(newPath);
+                    } else {
+                        console.log("Target language page doesn't exist:", newPath);
+                    }
+                } catch (e) {
+                    // If the check fails, proceed with redirect anyway
+                    window.location.replace(newPath);
+                }
+            } else {
+                // Mark as "handled" even if no redirection was needed
+                sessionStorage.setItem('redirected', 'true');
+                clearTimeout(safetyTimeout);
+            }
+        } catch (error) {
+            // Error handling for any issues in the language detection/redirect
+            console.error("Language redirect error:", error);
+            sessionStorage.setItem('redirected', 'true');
+            clearTimeout(safetyTimeout);
+        }
+    } else {
+        // We've already handled redirection, clear the safety timeout
+        clearTimeout(safetyTimeout);
     }
 });
-
 
 // ======================
 // Unified Initialization
