@@ -349,10 +349,6 @@ body.dark-theme .custom-link:hover {
     text-decoration: underline;
 }
 
-right-aligned {
-  text-align: right !important;
-}
-
 
 /* 5. Carousel System */
 /* ================================================== */
@@ -819,7 +815,7 @@ text-align: justify; /* Justification */
     margin-top: 10px;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     color: #444;
-    text-align: justify;
+    text-align: right !important;
 }
 
 .video-container {
