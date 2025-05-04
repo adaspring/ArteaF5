@@ -35,6 +35,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="alternate" hreflang="en" href="https://artea.netlify.app/index.html">
     <link rel="alternate" hreflang="fr" href="https://artea.netlify.app/index-fr.html">
+    <link rel="alternate" hreflang="es" href="https://artea.netlify.app/index-es.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://artea.netlify.app/index-zh-CN.html">
+    <link rel="alternate" hreflang="zh-TW" href="https://artea.netlify.app/index-zh-TW.html">
 
      <script type="application/ld+json">
 {
@@ -648,15 +651,6 @@
     
     <script src="script.js"></script>
     <script src="theme-toggle.js"></script>
-    <script>
-    // Détection de la langue du navigateur
-    const userLang = navigator.language || navigator.userLanguage;
-    
-    // Redirection pour les utilisateurs anglophones
-    if(userLang.startsWith('en') && window.location.pathname.includes('-fr.html')) {
-        window.location.href = 'index.html';
-    }
-    </script>
 
 </body>
 </html>
