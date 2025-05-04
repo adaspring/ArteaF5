@@ -349,7 +349,18 @@ body.dark-theme .custom-link:hover {
     text-decoration: underline;
 }
 
+/* Keep hyphenation BUT prevent ugly breaks */
+p, .text-content, .subsection {
+    hyphens: auto; /* Allow hyphenation */
+    word-break: normal !important; /* No random mid-word breaks */
+    overflow-wrap: break-word !important; /* Only break at valid points */
+}
 
+/* Emergency fix for forced breaks (add this second) */
+.no-bad-breaks {
+    word-break: keep-all !important;
+    overflow-wrap: anywhere !important; /* Less aggressive than break-word */
+}
 
 
 
