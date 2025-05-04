@@ -815,7 +815,7 @@ text-align: justify; /* Justification */
     margin-top: 10px;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     color: #444;
-    text-align: right !important;
+    text-align: left !important;
 }
 
 .video-container {
