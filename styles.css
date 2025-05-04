@@ -1503,6 +1503,16 @@ body.dark-theme .lightbox-caption {
 }
 
 @media (min-width: 768px) {
+  .carousel-thumbnails {
+    gap: 16px;
+    max-width: 205px;
+  }
+
+  .carousel-thumbnails img {
+    width: 58px;
+    height: 58px;
+  }
+
   .carousel button:first-of-type {
     left: 192px;
   }
@@ -1510,18 +1520,19 @@ body.dark-theme .lightbox-caption {
   .carousel button:last-of-type {
     right: 192px;
   }
-
-  .carousel-thumbnails {
-    max-width: 210px;
-  }
-
-  .carousel-thumbnails img {
-    width: 63px;
-    height: 63px;
-  }
 }
 
 @media (min-width: 1024px) {
+  .carousel-thumbnails {
+    gap: 21px;
+    max-width: 236px;
+  }
+
+  .carousel-thumbnails img {
+    width: 64px;
+    height: 64px;
+  }
+
   .carousel button:first-of-type {
     left: 255px;
   }
@@ -1529,18 +1540,19 @@ body.dark-theme .lightbox-caption {
   .carousel button:last-of-type {
     right: 255px;
   }
-
-  .carousel-thumbnails {
-    max-width: 215px;
-  }
-
-  .carousel-thumbnails img {
-    width: 66px;
-    height: 66px;
-  }
 }
 
 @media (min-width: 1200px) {
+  .carousel-thumbnails {
+    gap: 25px;
+    max-width: 260px;
+  }
+
+  .carousel-thumbnails img {
+    width: 70px;
+    height: 70px;
+  }
+
   .carousel button:first-of-type {
     left: 300px;
   }
@@ -1548,18 +1560,27 @@ body.dark-theme .lightbox-caption {
   .carousel button:last-of-type {
     right: 300px;
   }
+}
 
+@media (min-width: 1600px) {
   .carousel-thumbnails {
-    max-width: 220px;
-      gap: 20px;
+    gap: 33px;
+    max-width: 282px;
   }
 
   .carousel-thumbnails img {
-    width: 70px;
-    height: 70px;
+    width: 72px;
+    height: 72px;
+  }
+
+  .carousel button:first-of-type {
+    left: 400px;
+  }
+
+  .carousel button:last-of-type {
+    right: 400px;
   }
 }
-
 
 
 
