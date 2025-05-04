@@ -350,6 +350,7 @@ body.dark-theme .custom-link:hover {
 }
 
 
+
 /* 5. Carousel System */
 /* ================================================== */
 .carousel-container {
@@ -817,6 +818,13 @@ text-align: justify; /* Justification */
     color: #444;
     text-align: justify;
 }
+
+#left-align-desc {
+    text-align: left !important;
+    word-break: normal !important;
+    hyphens: manual !important;
+}
+
 
 .video-container {
     margin: 2rem 0;
