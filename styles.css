@@ -80,6 +80,12 @@ a:hover {
     background-color: var(--accent-color);
 }
 
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
 
 /* 2. Header & Navigation */
 /* ================================================== */
