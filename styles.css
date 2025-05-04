@@ -823,6 +823,19 @@ text-align: justify; /* Justification */
     text-align: left !important;
 }
 
+#left-align-desc p {
+    margin: 0 0 3px 0; /* 3px matches original line spacing */
+    line-height: 1.0; /* Maintains tight line height */
+    padding: 0;
+}
+
+#left-align-desc p:last-child {
+    margin-bottom: 0; /* Remove bottom margin from last paragraph */
+}
+
+
+
+
 
 .video-container {
     margin: 2rem 0;
