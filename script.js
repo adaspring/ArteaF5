@@ -293,28 +293,28 @@ function goToSlide(id, index) {
 // Language System
 // ======================
 
-// Détection de la langue du navigateur
-const userLang = navigator.language || navigator.userLanguage;
+// ======================
+// Language Redirect (Standalone Safe Insert)
+// ======================
+(function() {
+    const userLang = navigator.language || navigator.userLanguage;
+    const langCode = userLang.split('-')[0];
 
-// Définir les redirections en fonction de la langue
-const languageMappings = {
-    'en': 'index.html',
-    'fr': 'index-fr.html',
-    'es': 'index-es.html',
-    'de': 'index-de.html',
-    'zh-CN': 'index-zh-CN.html',
-    'zh-TW': 'index-zh-TW.html'
-};
+    const languageMap = {
+        en: 'index.html',
+        fr: 'index-fr.html',
+        es: 'index-es.html',
+        de: 'index-de.html',
+        zh: 'index-zh-CN.html'
+    };
 
-// Vérifier si la langue détectée n'est pas déjà la page actuelle
-const currentPage = window.location.pathname;
-Object.keys(languageMappings).forEach(lang => {
-    if (userLang.startsWith(lang) && currentPage !== `/${languageMappings[lang]}`) {
-        window.location.href = languageMappings[lang];
+    const currentPage = window.location.pathname.split('/').pop();
+    const targetPage = languageMap[langCode];
+
+    if (targetPage && currentPage !== targetPage) {
+        window.location.href = targetPage;
     }
-});
-
-
+})();
 
 
 
