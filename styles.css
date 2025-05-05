@@ -69,11 +69,13 @@ a:hover {
 
 .theme-toggle-wrapper {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
   justify-content: center;
   margin: 0 0px; /* horizontal spacing between icons */
   font-size: 0.7rem;
+  translateY(-4px); /* Nudges icon up slightly */
+}
 }
 
 .theme-label {
