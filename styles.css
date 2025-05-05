@@ -118,7 +118,7 @@ body.dark-theme .theme-toggle {
 
 .language-switcher {
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(2, 2);
   grid-gap: 0.2rem 0.4rem;
   font-size: 0.9rem;
   align-items: center;
