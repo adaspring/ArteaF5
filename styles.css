@@ -60,35 +60,79 @@ a:hover {
 
 /* LANGUAGE */
 /* ================================================== */
-/* Ajoutez ceci à styles.css */
-.language-switcher {
-    display: flex;
-    align-items: center;
-    font-size: 0.9em;
-    gap: 0.3rem;
-    position: static; /* Removed absolute positioning causing alignment issues */
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: flex-end;
 }
 
+.theme-toggle-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.7rem;
+}
+
+.theme-label {
+  font-size: 0.65rem;
+  color: #665544;
+  margin-bottom: 0.2rem;
+}
+
+body.dark-theme .theme-label {
+  color: #CCD5AE;
+}
+
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(204, 213, 174, 0.8);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-theme .theme-toggle {
+  background: rgba(102, 85, 68, 0.8);
+  color: #CCD5AE;
+}
+
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
 
 .language-switcher a {
-    color: var(--text-color);
-    text-decoration: none;
-    padding: 0.3rem;
-    border-radius: 3px;
-    transition: color 0.3s ease;
-    position: relative;
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
 }
 
 .language-switcher a:hover {
-    background-color: var(--accent-color);
+  background-color: var(--accent-color);
 }
 
+.hamburger-menu {
+  font-size: 2rem; /* Slightly bigger for visual balance */
+  cursor: pointer;
+  color: #665544;
+  transition: transform 0.3s ease;
+}
 
-.header-controls {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    position: relative;
+.hamburger-menu:hover {
+  transform: scale(1.1);
 }
 
 
@@ -105,20 +149,6 @@ header {
     z-index: 100;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
-
-.hamburger-menu {
-    cursor: pointer;
-    font-size: 1.5rem;
-    transition: transform 0.3s ease;
-    z-index: 100;
-    pointer-events: auto;
-    color: #665544;
-}
-
-.hamburger-menu:hover {
-    transform: scale(1.1);
-}
-
 
 
 
@@ -1560,6 +1590,16 @@ body.dark-theme .lightbox-caption {
         gap: 15px;
     }
 
+theme-toggle {
+    width: 32px;
+    height: 32px;
+  }
+  .hamburger-menu {
+    font-size: 1.8rem;
+  }
+
+
+    
 }
 
 @media (min-width: 768px) {
