@@ -80,6 +80,8 @@ a:hover {
   font-size: 0.65rem;
   color: #665544;
   margin-bottom: 0.2rem;
+  white-space: nowrap;
+  display: inline;
 }
 
 body.dark-theme .theme-label {
@@ -117,6 +119,12 @@ body.dark-theme .theme-toggle {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.lang-separator {
+  margin: 0 0.4rem;
+  color: #665544;
   font-size: 0.9rem;
 }
 
