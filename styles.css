@@ -1590,16 +1590,6 @@ body.dark-theme .lightbox-caption {
         gap: 15px;
     }
 
-theme-toggle {
-    width: 32px;
-    height: 32px;
-  }
-  .hamburger-menu {
-    font-size: 1.8rem;
-  }
-
-
-    
 }
 
 @media (min-width: 768px) {
