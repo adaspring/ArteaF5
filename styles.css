@@ -71,6 +71,8 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  margin: 0 8px; /* horizontal spacing between icons */
   font-size: 0.7rem;
 }
 
@@ -91,6 +93,11 @@ body.dark-theme .theme-label {
   background: rgba(204, 213, 174, 0.8);
   border: none;
   cursor: pointer;
+  display: flex; /* ensure icon is centered */
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #665544;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
@@ -104,6 +111,7 @@ body.dark-theme .theme-toggle {
   background: rgba(102, 85, 68, 0.8);
   color: #CCD5AE;
 }
+
 
 .language-switcher {
   display: flex;
@@ -1590,6 +1598,14 @@ body.dark-theme .lightbox-caption {
         gap: 15px;
     }
 
+theme-toggle {
+    width: 32px;
+    height: 32px;
+    font-size: 1.3rem;
+}
+
+
+    
 }
 
 @media (min-width: 768px) {
