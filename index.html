@@ -103,21 +103,28 @@
 
     <body>
     <header>
+  <header>
   <h1><a href="index.html">ARTEAK</a></h1>
   <div class="header-controls">
+    
+    <!-- Theme toggle -->
     <div class="theme-toggle-wrapper">
       <span class="theme-label">dark | light</span>
-      <button class="theme-toggle" aria-label="Toggle dark/light mode">
-        <!-- Optional icon inside -->
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode">
+        🌓
       </button>
     </div>
+
+    <!-- Language switcher -->
     <div class="language-switcher">
       <a href="index.html" aria-label="English version">EN</a>
       <a href="index-fr.html" aria-label="Version française">FR</a>
     </div>
+
+    <!-- Hamburger menu -->
     <div class="hamburger-menu" onclick="toggleMenu()" aria-label="Menu">☰</div>
   </div>
-    </header>
+  </header>
 
     <div class="breadcrumb">
         <a href="index.html" class="active">Home</a>
