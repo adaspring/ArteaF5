@@ -118,13 +118,14 @@ body.dark-theme .theme-toggle {
 
 .language-switcher {
   display: grid;
-  grid-template-columns: repeat(2, 2);
-  grid-gap: 0.2rem 0.4rem;
-  font-size: 0.9rem;
+  grid-template-columns: repeat(2, auto);
+  gap: 0.1rem 0.3rem; /* row-gap (vertical) is 0.1rem, column-gap is 0.3rem */
+  font-size: 0.7rem;
   align-items: center;
   justify-items: center;
-  transform: translateY(5px);
 }
+
+
 
 .lang-separator {
   margin: 0 0.1rem;
