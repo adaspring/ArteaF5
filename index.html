@@ -103,16 +103,20 @@
 
     <body>
     <header>
-    <h1><a href="index.html">ARTEAK</a></h1>
-    <div class="header-controls">
-        <div class="theme-toggle"></div> <!-- This should be your dark/light mode toggle -->
-        <div class="language-switcher">
-    <a href="index.html" aria-label="English version">EN</a>
-    <span>|</span>
-    <a href="index-fr.html" aria-label="Version française">FR</a>
-        </div>
-        <div class="hamburger-menu" onclick="toggleMenu()" aria-label="Menu">☰</div>
+  <h1><a href="index.html">ARTEAK</a></h1>
+  <div class="header-controls">
+    <div class="theme-toggle-wrapper">
+      <span class="theme-label">dark | light</span>
+      <button class="theme-toggle" aria-label="Toggle dark/light mode">
+        <!-- Optional icon inside -->
+      </button>
     </div>
+    <div class="language-switcher">
+      <a href="index.html" aria-label="English version">EN</a>
+      <a href="index-fr.html" aria-label="Version française">FR</a>
+    </div>
+    <div class="hamburger-menu" onclick="toggleMenu()" aria-label="Menu">☰</div>
+  </div>
     </header>
 
     <div class="breadcrumb">
