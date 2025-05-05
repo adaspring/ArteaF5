@@ -72,7 +72,7 @@ a:hover {
   flex-direction: column-reverse;
   align-items: center;
   justify-content: center;
-  margin: 0 0px; /* horizontal spacing between icons */
+  margin: 0; /* horizontal spacing between icons */
   font-size: 0.7rem;
   transform: translateY(10px);/* Nudges icon up slightly */
 }
@@ -119,7 +119,7 @@ body.dark-theme .theme-toggle {
 .language-switcher {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.3rem;
   font-size: 0.9rem;
 }
 
