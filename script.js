@@ -495,6 +495,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const newTheme = document.body.classList.contains('dark-theme') ? 'light' : 'dark';
         applyTheme(newTheme);
         localStorage.setItem('theme', newTheme);
+         toggleButton.setAttribute('aria-pressed', newTheme === 'dark' ? 'true' : 'false');
     });
 
     // Listen for system theme changes
