@@ -467,30 +467,7 @@ function initLoadingStates() {
 
 // Theme Toggle Functionality
 document.addEventListener('DOMContentLoaded', function() {
-    // Create theme toggle container
-    const toggleContainer = document.createElement('div');
-    toggleContainer.id = 'theme-toggle-container';
-    toggleContainer.classList.add('theme-toggle-container');
-    
-    // Create theme label
-    const themeLabel = document.createElement('div');
-    themeLabel.classList.add('theme-label');
-    themeLabel.textContent = 'dark | light';
-    
-    // Create theme toggle button
-    const toggleButton = document.createElement('button');
-    toggleButton.id = 'theme-toggle';
-    toggleButton.classList.add('theme-toggle');
-    toggleButton.innerHTML = '🌓'; // Moon/sun icon
-    toggleButton.setAttribute('aria-label', 'Toggle dark mode');
-    
-    // Add elements to container
-    toggleContainer.appendChild(themeLabel);
-    toggleContainer.appendChild(toggleButton);
-    document.body.appendChild(toggleContainer);
-    
-    
-    
+    const toggleButton = document.getElementById('theme-toggle');
     // Check for saved user preference first
 const currentTheme = localStorage.getItem('theme');
 if (currentTheme === 'dark') {
