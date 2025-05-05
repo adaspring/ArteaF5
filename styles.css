@@ -876,7 +876,7 @@ text-align: justify; /* Justification */
 /* NEW: Justified text for first paragraph */
 .justified-desc {
     text-align: justify;
-    margin-bottom: 5px; /* Adds space before metadata */
+    margin-bottom: 10px; /* Adds space before metadata */
 }
 
 
