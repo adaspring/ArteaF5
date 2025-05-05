@@ -74,7 +74,7 @@ a:hover {
   justify-content: center;
   margin: 0 0px; /* horizontal spacing between icons */
   font-size: 0.7rem;
-  transform: translateY(8px);/* Nudges icon up slightly */
+  transform: translateY(10px);/* Nudges icon up slightly */
 }
 
 .theme-label {
