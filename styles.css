@@ -154,6 +154,22 @@ body.dark-theme .theme-toggle {
 }
 
 
+.header-controls {
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.top-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.language-switcher {
+  margin-top: 0.4rem;
+  justify-content: center;
+  width: 100%;
+}
 /* 2. Header & Navigation */
 /* ================================================== */
 header {
