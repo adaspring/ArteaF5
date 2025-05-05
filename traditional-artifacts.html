@@ -108,8 +108,26 @@
   
 <body>
     <header>
-        <h1><a href="index.html">ARTEAK</a></h1>
-        <div class="hamburger-menu" onclick="toggleMenu()" aria-label="Menu">☰</div>
+  <h1><a href="index.html">ARTEAK</a></h1>
+  <div class="header-controls">
+    
+    <!-- Theme toggle -->
+    <div class="theme-toggle-wrapper">
+      <span class="theme-label">dark | light</span>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode">
+        🌓
+      </button>
+    </div>
+
+    <!-- Language switcher -->
+    <div class="language-switcher">
+      <a href="index.html" aria-label="English version">EN</a>
+      <a href="index-fr.html" aria-label="Version française">FR</a>
+    </div>
+
+    <!-- Hamburger menu -->
+    <div class="hamburger-menu" onclick="toggleMenu()" aria-label="Menu">☰</div>
+  </div>
     </header>
 
     <div class="breadcrumb">
@@ -124,10 +142,10 @@
             <li>
                 <a href="nok-terracottas.html" class="active">Nok Terracottas</a>
                 <ul class="submenu">
-                    <li><a href="large-man-bust.html">Large Man Bust</a></li>
-                    <li><a href="short-man-bust.html">Short Man Bust</a></li>
+                    <li><a href="large-man-bust.html">Large Man</a></li>
+                    <li><a href="short-man-bust.html">Short Man</a></li>
                     <li><a href="man-head.html">Man Head</a></li>
-                    <li><a href="nok-terracottas.html#about-nok">About NT</a></li>
+                    <li><a href="nok-terracottas.html#about-nok">About Nok</a></li>
                 </ul>
             </li>
             <li>
@@ -137,17 +155,17 @@
                     <li><a href="sun-akhan-weight.html">Sun</a></li>
                     <li><a href="twins-akhan-weight.html">Twins</a></li>
                     <li><a href="snake-akhan-weight.html">Snake</a></li>
-                    <li><a href="african-bronzes.html#about-bronzes">About AB</a></li>
+                    <li><a href="african-bronzes.html#about-bronzes">About Bronzes</a></li>
                 </ul>
             </li>
             <li>
-                <a href="traditional-artifacts.html">Artifacts</a>
+                <a href="traditional-artifacts.html">Ritual Artifacts</a>
                 <ul class="submenu">
                     <li><a href="bocio-fetiche.html">Bōcio/Fetiche</a></li>
-                    <li><a href="traditional-artifacts.html#about-artifacts">About Ats</a></li>
+                    <li><a href="traditional-artifacts.html#about-artifacts">About Artifacts</a></li>
                 </ul>
             </li>
-            <li><a href="index.html#about">About Me</a></li>
+            <li><a href="index.html#about">About ARTEAK</a></li>
             <li><a href="index.html#contact">Contact</a></li>
         </ul>
     </nav>
@@ -320,5 +338,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="theme-toggle.js"></script>
 </body>
 </html>
