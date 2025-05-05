@@ -112,8 +112,26 @@
 </head>
 <body>
     <header>
-        <h1><a href="index.html">ARTEA</a></h1>
-        <div class="hamburger-menu" onclick="toggleMenu()" aria-label="Menu">☰</div>
+  <h1><a href="index.html">ARTEAK</a></h1>
+  <div class="header-controls">
+    
+    <!-- Theme toggle -->
+    <div class="theme-toggle-wrapper">
+      <span class="theme-label">dark | light</span>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode">
+        🌓
+      </button>
+    </div>
+
+    <!-- Language switcher -->
+    <div class="language-switcher">
+      <a href="index.html" aria-label="English version">EN</a>
+      <a href="index-fr.html" aria-label="Version française">FR</a>
+    </div>
+
+    <!-- Hamburger menu -->
+    <div class="hamburger-menu" onclick="toggleMenu()" aria-label="Menu">☰</div>
+  </div>
     </header>
 
     <div class="breadcrumb">
