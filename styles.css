@@ -819,22 +819,27 @@ text-align: justify; /* Justification */
     text-align: justify;
 }
 
-#left-align-desc {
+
+/* CHANGED: ID to class */
+.left-align-desc {
     text-align: left !important;
 }
 
-#left-align-desc p {
-    margin: 0 0 3px 0; /* 3px matches original line spacing */
-    line-height: 1.0; /* Maintains tight line height */
+.left-align-desc p {
+    margin: 0 0 3px 0;
+    line-height: 1.0;
     padding: 0;
 }
 
-#left-align-desc p:last-child {
-    margin-bottom: 0; /* Remove bottom margin from last paragraph */
+.left-align-desc p:last-child {
+    margin-bottom: 0;
 }
 
-
-
+/* NEW: Justified text for first paragraph */
+.justified-desc {
+    text-align: justify;
+    margin-bottom: 5px; /* Adds space before metadata */
+}
 
 
 .video-container {
