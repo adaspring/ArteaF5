@@ -89,8 +89,8 @@ body.dark-theme .theme-label {
 }
 
 .theme-toggle {
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background: rgba(204, 213, 174, 0.8);
   border: none;
@@ -98,7 +98,7 @@ body.dark-theme .theme-label {
   display: flex; /* ensure icon is centered */
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.0rem;
   color: #665544;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
