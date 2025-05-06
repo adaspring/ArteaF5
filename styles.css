@@ -653,19 +653,15 @@ body.dark-theme .carousel button::after {
 
 
 
+/* Small wraped image left-bottom*/
 
-
-
-
-.text-wrap-image {
-  margin: 1.5rem 0;
-  overflow: hidden; /* to clear the float */
+.clearfix {
+  clear: both;
 }
-
 .float-image {
   float: left;
   margin: 0 1rem 1rem 0;
-  max-width: 60%; /* or whatever size works best */
+  max-width: 30%; /* or whatever size works best */
 }
 
 
