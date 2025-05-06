@@ -655,44 +655,17 @@ body.dark-theme .carousel button::after {
 
 
 
-.text-wrap-flex {
-  display: flex;
-  align-items: flex-start;
-  gap: 1em;
-  margin-bottom: 1.5em;
-  flex-wrap: wrap; /* allows better behavior on small screens */
-}
 
-.text-wrap-flex img.wrap-thumbnail {
-  flex-shrink: 0;
-  width: 200px;
-  height: auto;
-  border-radius: 8px;
-}
 
 .text-wrap-image {
   margin: 1.5rem 0;
   overflow: hidden; /* to clear the float */
 }
 
-.text-wrap-image img.float-image {
-  float: right;
-  width: 250px;
-  margin: 0 0 1rem 1rem;
-  border-radius: 6px;
-  shape-outside: margin-box;
-}
 .float-image {
   float: left;
   margin: 0 1rem 1rem 0;
   max-width: 60%; /* or whatever size works best */
-}
-.grid-container.float-like {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 1rem;
-  align-items: start;
-  margin-bottom: 2rem;
 }
 
 
@@ -737,44 +710,6 @@ body.dark-theme .carousel button::after {
 }
 
 
-/* Two image templates */
-/* Template 1: Large Centered Image */
-.grid-container.image-large {
-    grid-template-columns: 1fr;
-    max-width: 800px;
-    margin: 2rem auto;
-}
-
-.grid-container.image-large .grid-item {
-    aspect-ratio: unset;
-    max-height: 80vh;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Template 2: Smaller Inline Image */
-.grid-container.image-inline {
-    grid-template-columns: 1fr;
-    max-width: 400px;
-    margin: 1rem 0;
-    float: left; /* or right */
-    shape-outside: margin-box;
-    padding: 0 1.5rem 1rem 0;
-}
-
-.grid-container.image-inline .grid-item {
-    aspect-ratio: unset;
-    max-height: 50vh;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Right-aligned alternative */
-.grid-container.image-inline.right {
-    float: right;
-    padding: 0 0 1rem 1.5rem;
-}
-
-/* Lightbox modification for single images remains same */
-#lightbox.single-image .lightbox-nav { display: none; }
 
 /* 7. Content Sections */
 /* ================================================== */
