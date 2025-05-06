@@ -653,7 +653,7 @@ body.dark-theme .carousel button::after {
 
 
 
-/* Small wraped image left-bottom*/
+/* Small wraped image left-bottom for subsection*/
 
 .clearfix {
   clear: both;
@@ -662,6 +662,7 @@ body.dark-theme .carousel button::after {
   float: left;
   margin: 0 1rem 0.5rem 0;
   max-width: 30%; /* or whatever size works best */
+  display:block;
 }
 
 
