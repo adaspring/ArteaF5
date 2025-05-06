@@ -892,6 +892,7 @@ text-align: justify; /* Justification */
 .justified-desc {
     text-align: justify;
     margin-bottom: 4px; /* Adds space before metadata */
+    line-height: 1.0;
 }
 
 
