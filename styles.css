@@ -891,7 +891,7 @@ text-align: justify; /* Justification */
 /* NEW: Justified text for first paragraph */
 .justified-desc {
     text-align: justify;
-    line-height: 1.0;
+    line-height: 1.2;
 }
 
 
