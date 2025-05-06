@@ -660,13 +660,16 @@ body.dark-theme .carousel button::after {
 }
 .float-image {
   float: left;
-  margin: 0 0.5rem 0rem 0;
+  margin: 0.2rem 0.5rem 0rem 0;
   max-width: 45%; /* or whatever size works best */
   display:block;
+
+
 }
 
 .subsection img.float-image {
   margin-bottom: 0rem !important; /* Using !important to override any competing styles */
+  margin-top: 0.3rem !important;
 }
 
 
