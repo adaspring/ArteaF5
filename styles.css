@@ -891,7 +891,6 @@ text-align: justify; /* Justification */
 /* NEW: Justified text for first paragraph */
 .justified-desc {
     text-align: justify;
-    margin-bottom: 4px; /* Adds space before metadata */
     line-height: 1.0;
 }
 
