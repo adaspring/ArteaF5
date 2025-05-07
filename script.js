@@ -1,4 +1,4 @@
-// script.js - Complete Version with All Updates
+// script.js - Complete Version with Enhanced Anchor Links
 
 // ======================
 // Menu Functionality
@@ -140,10 +140,28 @@ function initSubmenus() {
             // Remove arrows from non-submenu items
             const existingArrow = menuItem.querySelector('.submenu-arrow');
             if (existingArrow) existingArrow.remove();
-        }
-            
-            
-            // Update URL without full page reload
+
+            // Handle section anchors within the same page
+            link.addEventListener('click', (e) => {
+                const href = link.getAttribute('href');
+                
+                // If it's an anchor link to the same page
+                if (href && href.startsWith('#') && href !== '#') {
+                    e.preventDefault();
+                    
+                    // Close the menu first
+                    const menu = document.getElementById('flyout-menu');
+                    if (menu.classList.contains('open')) {
+                        toggleMenu();
+                    }
+                    
+                    // Scroll to the section with optimal positioning
+                    const targetSection = document.querySelector(href);
+                    if (targetSection) {
+                        scrollToOptimalPosition(targetSection);
+                    }
+                    
+                    // Update URL without full page reload
                     history.pushState(null, null, href);
                 }
             });
@@ -153,82 +171,76 @@ function initSubmenus() {
     // Ensure the flyout menu is always scrollable when content exceeds viewport
     ensureMenuScrollability();
 }
-            
+
 // ======================
 // Enhanced Anchor Links
 // ======================
 /**
-
-Handles all anchor links with precise scrolling positioning
-
-Centers the target element in the viewport or positions it optimally
-*/
+ * Handles all anchor links with precise scrolling positioning
+ * Centers the target element in the viewport or positions it optimally
+ */
 function initEnhancedAnchorLinks() {
-// Select all anchor links that point to an ID on the same page
-// But exclude those in the menu system (which are handled separately)
-document.querySelectorAll('a[href^="#"]:not([href="#"]):not(#flyout-menu a)').forEach(link => {
-link.addEventListener('click', function(e) {
-// Prevent default anchor link behavior
-e.preventDefault();
-
-const href = this.getAttribute('href');  
-     const targetElement = document.querySelector(href);  
-
-     if (targetElement) {  
-         // Calculate optimal scroll position  
-         scrollToOptimalPosition(targetElement);  
-
-         // Update URL without page reload  
-         history.pushState(null, null, href);  
-     }  
- });
-
-});
+    // Select all anchor links that point to an ID on the same page
+    // But exclude those in the menu system (which are handled separately)
+    document.querySelectorAll('a[href^="#"]:not([href="#"]):not(#flyout-menu a)').forEach(link => {
+        link.addEventListener('click', function(e) {
+            // Prevent default anchor link behavior
+            e.preventDefault();
+            
+            const href = this.getAttribute('href');
+            const targetElement = document.querySelector(href);
+            
+            if (targetElement) {
+                // Calculate optimal scroll position
+                scrollToOptimalPosition(targetElement);
+                
+                // Update URL without page reload
+                history.pushState(null, null, href);
+            }
+        });
+    });
 }
-
 
 /**
-
-Calculates and scrolls to the optimal position for the target element
-
-@param {HTMLElement} targetElement - The element to scroll to
-*/
+ * Calculates and scrolls to the optimal position for the target element
+ * @param {HTMLElement} targetElement - The element to scroll to
+ */
 function scrollToOptimalPosition(targetElement) {
-// Get element's position relative to the viewport
-const rect = targetElement.getBoundingClientRect();
-
-// Get current scroll position
-const currentScrollPos = window.pageYOffset || document.documentElement.scrollTop;
-
-// Calculate element's absolute position on the page
-const absoluteElementTop = rect.top + currentScrollPos;
-
-// Get viewport height
-const viewportHeight = window.innerHeight;
-
-// Check if we have a fixed header and get its height
-// Replace '.header' with your actual header selector if different
-const header = document.querySelector('header') || document.querySelector('.header');
-const headerHeight = header && header.getBoundingClientRect().height || 0;
-
-// Calculate ideal position:
-// If element is small, center it in viewport
-// If element is large, position it near the top with appropriate padding
-let scrollOffset;
-
-if (rect.height < viewportHeight * 0.7) {
-// For smaller elements, center them in the viewport
-scrollOffset = absoluteElementTop - (viewportHeight / 2) + (rect.height / 2);
-} else {
-// For larger elements, position them at the top with some padding
-scrollOffset = absoluteElementTop - headerHeight - 20; // 20px additional padding
-}
-
-// Perform the scroll with smooth behavior
-window.scrollTo({
-top: scrollOffset,
-behavior: 'smooth'
-});
+    // Get element's position relative to the viewport
+    const rect = targetElement.getBoundingClientRect();
+    
+    // Get current scroll position
+    const currentScrollPos = window.pageYOffset || document.documentElement.scrollTop;
+    
+    // Calculate element's absolute position on the page
+    const absoluteElementTop = rect.top + currentScrollPos;
+    
+    // Get viewport height
+    const viewportHeight = window.innerHeight;
+    
+    // Check if we have a fixed header and get its height
+    // Replace '.header' with your actual header selector if different
+    const header = document.querySelector('header') || document.querySelector('.header');
+    const headerHeight = header && header.getBoundingClientRect().height || 0;
+    
+    // Calculate ideal position:
+    // If element is small, center it in viewport
+    // If element is large, position it near the top with appropriate padding
+    let scrollOffset;
+    
+    if (rect.height < viewportHeight * 0.7) {
+        // For smaller elements, center them in the viewport
+        scrollOffset = absoluteElementTop - (viewportHeight / 2) + (rect.height / 2);
+    } else {
+        // For larger elements, position them at the top with some padding
+        scrollOffset = absoluteElementTop - headerHeight - 20; // 20px additional padding
+    }
+    
+    // Perform the scroll with smooth behavior
+    window.scrollTo({
+        top: scrollOffset,
+        behavior: 'smooth'
+    });
 }
 
 // Add this new function to ensure menu scrollability
@@ -269,9 +281,6 @@ function setActivePage() {
 
 // ======================
 // Carousel System
-// ======================
-// ======================
-// Carousel System (Corrected)
 // ======================
 function initCarousel(id) {
     const container = document.getElementById(`items-${id}`);
@@ -347,7 +356,6 @@ function goToSlide(id, index) {
     }
 }
 
-
 // ======================
 // Read More Toggle Functionality
 // ======================
@@ -369,9 +377,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
-
-
-
 
 // ======================
 // Lightbox System
@@ -457,8 +462,6 @@ function showPrevImage() {
     updateLightboxImage();
 }
 
-
-
 // ======================
 // Touch Support
 // ======================
@@ -492,206 +495,3 @@ function handleSwipe(carousel) {
 // ======================
 // Utility Functions
 // ======================
-function initBackToTop() {
-    const backToTopButton = document.createElement('a');
-    backToTopButton.className = 'back-to-top';
-    backToTopButton.innerHTML = '↑';
-    backToTopButton.setAttribute('aria-label', 'Back to top');
-    document.body.appendChild(backToTopButton);
-
-    window.addEventListener('scroll', () => {
-        backToTopButton.classList.toggle('visible', window.pageYOffset > 300);
-    });
-
-    backToTopButton.addEventListener('click', (e) => {
-        e.preventDefault();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-}
-
-function initLoadingStates() {
-    document.querySelectorAll('.carousel-images img, .grid-item img').forEach(img => {
-        if (!img.complete) img.style.opacity = '0';
-        img.addEventListener('load', () => img.style.opacity = '1');
-        if (img.complete) img.style.opacity = '1';
-    });
-}
-
-
-
-// Theme Toggle Functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const toggleButton = document.getElementById('theme-toggle');
-    
-    // Function to apply the theme based on the preference
-    function applyTheme(theme) {
-        if (theme === 'dark') {
-            document.body.classList.add('dark-theme');
-        } else {
-            document.body.classList.remove('dark-theme');
-        }
-    }
-
-    // Check for saved user preference
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-        applyTheme(savedTheme);
-    } else {
-        // No saved preference, check system preference
-        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const initialTheme = systemPrefersDark ? 'dark' : 'light';
-        applyTheme(initialTheme);
-        localStorage.setItem('theme', initialTheme);
-    }
-
-    // Handle theme toggle
-    toggleButton.addEventListener('click', function() {
-        const newTheme = document.body.classList.contains('dark-theme') ? 'light' : 'dark';
-        applyTheme(newTheme);
-        localStorage.setItem('theme', newTheme);
-    });
-
-    // Listen for system theme changes
-    if (window.matchMedia) {
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-            // Only auto-switch if user hasn't manually set preference
-            if (!localStorage.getItem('theme')) {
-                const newTheme = event.matches ? 'dark' : 'light';
-                applyTheme(newTheme);
-            }
-        });
-    }
-});
-
-
-// ======================
-// Language redirection script with enhanced browser compatibility
-// ======================
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Set a safety timeout to prevent any hanging redirects
-    const safetyTimeout = setTimeout(function() {
-        if (!sessionStorage.getItem('redirected')) {
-            console.log("Safety timeout reached for language redirect");
-            sessionStorage.setItem('redirected', 'true');
-        }
-    }, 2000); // 2 seconds timeout
-    
-    // Only perform redirection if we haven't already done it in this session
-    if (sessionStorage.getItem('redirected') !== 'true') {
-        try {
-            // Get user language with multiple fallbacks for maximum compatibility
-            const userLang = navigator.language || navigator.userLanguage || navigator.browserLanguage || navigator.systemLanguage || 'en';
-            const primaryLang = userLang.split('-')[0].toLowerCase(); // Get primary language code and normalize (e.g., "en" from "en-US")
-            
-            // Define the language mappings
-            const languageMappings = {
-                'en': '',          // English is default with no suffix
-                'fr': '-fr.html',
-                'es': '-es.html',
-                'de': '-de.html',
-                'zh': '-zh-CN.html', // Default Chinese (simplified)
-                'zh-cn': '-zh-CN.html',
-                'zh-tw': '-zh-TW.html'
-            };
-            
-            // Get current path and page name
-            const currentPath = window.location.pathname;
-            const pageName = currentPath.split('/').pop();
-            
-            // Check if this is already a language-specific page
-            const isLanguageSpecificPage = Object.values(languageMappings)
-                .filter(suffix => suffix !== '') // Exclude the English empty suffix
-                .some(suffix => pageName.includes(suffix));
-            
-            // Only redirect if:
-            // 1. User's language is not English
-            // 2. We're on a default (English) page
-            // 3. We're not on a language-specific page already
-            if (primaryLang !== 'en' && !isLanguageSpecificPage) {
-                // Get the appropriate language suffix based on user's browser language
-                // Try exact match first, then primary language
-                let targetSuffix = languageMappings[userLang.toLowerCase()] || languageMappings[primaryLang];
-                
-                // If no specific mapping exists for the user's language, default to English (no redirection)
-                if (!targetSuffix) {
-                    // Mark as redirected to prevent future attempts and exit
-                    sessionStorage.setItem('redirected', 'true');
-                    clearTimeout(safetyTimeout);
-                    return;
-                }
-                
-                // Create the new URL with language suffix
-                // For index.html or similar, we need special handling
-                let newPath;
-                if (pageName === 'index.html' || pageName === '' || pageName === '/') {
-                    // For the index page
-                    const baseDir = currentPath.substring(0, currentPath.lastIndexOf('/') + 1);
-                    const baseName = 'index';
-                    newPath = baseDir + baseName + targetSuffix;
-                } else {
-                    // For other pages, replace .html with the language suffix
-                    newPath = currentPath.replace('.html', targetSuffix);
-                }
-                
-                // Mark as redirected to prevent future attempts
-                sessionStorage.setItem('redirected', 'true');
-                
-                // Clear the safety timeout since we're proceeding with a controlled redirect
-                clearTimeout(safetyTimeout);
-                
-                // Check if the target file exists before redirecting (optional but safer)
-                const http = new XMLHttpRequest();
-                http.open('HEAD', newPath, false);
-                try {
-                    http.send();
-                    if (http.status !== 404) {
-                        // File exists, perform the redirection
-                        window.location.replace(newPath);
-                    } else {
-                        console.log("Target language page doesn't exist:", newPath);
-                    }
-                } catch (e) {
-                    // If the check fails, proceed with redirect anyway
-                    window.location.replace(newPath);
-                }
-            } else {
-                // Mark as "handled" even if no redirection was needed
-                sessionStorage.setItem('redirected', 'true');
-                clearTimeout(safetyTimeout);
-            }
-        } catch (error) {
-            // Error handling for any issues in the language detection/redirect
-            console.error("Language redirect error:", error);
-            sessionStorage.setItem('redirected', 'true');
-            clearTimeout(safetyTimeout);
-        }
-    } else {
-        // We've already handled redirection, clear the safety timeout
-        clearTimeout(safetyTimeout);
-    }
-});
-
-
-
-// ======================
-// Unified Initialization
-// ======================
-document.addEventListener('DOMContentLoaded', () => {
-    // Initialize all carousels
-    document.querySelectorAll('.carousel-container').forEach(container => {
-        const baseId = container.id.replace(/-section$/, '');
-        initCarousel(baseId);
-    });
-
-    // Initialize other components
-    initSubmenus();
-    setActivePage();
-    initBackToTop();
-    initLightbox();
-    addTouchSupport();
-    initLoadingStates();
-    setupIndependentScrolling();
-    initEnhancedAnchorLinks();
-});
