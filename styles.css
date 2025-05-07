@@ -925,7 +925,10 @@ text-align: justify; /* Justification */
     text-decoration: underline;
 }
 
-
+#akhan-gold {
+    scroll-margin-top: 300px; /* Adjust based on your header height */
+    position: relative;
+}
 
 #akhan-gold::before {
       margin-top: 500px;   
@@ -933,7 +936,6 @@ text-align: justify; /* Justification */
     content: '';
     visibility: hidden;
     pointer-events: none;
-    height: 300px;
 }
 
 /* 8. Footer & Back to Top */
