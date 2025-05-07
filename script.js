@@ -619,6 +619,32 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+
+
+// smooth scrolling update
+document.addEventListener('DOMContentLoaded', function() {
+    // Handle smooth scrolling for info links
+    document.querySelectorAll('a[href="#akhan-gold"]').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetSection = document.getElementById('akhan-gold');
+            if (targetSection) {
+                // Calculate the exact position to scroll to
+                const headerHeight = document.querySelector('header').offsetHeight;
+                const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                
+                // Use smooth scrolling
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
+
+
+
 // ======================
 // Unified Initialization
 // ======================
