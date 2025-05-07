@@ -934,7 +934,7 @@ text-align: justify; /* Justification */
     content: '';
     display: block;
     height: 300px; /* Same as scroll-margin-top */
-    margin-top: 100px;
+    margin-top: 300px;
     visibility: hidden;
     pointer-events: none;
 }
