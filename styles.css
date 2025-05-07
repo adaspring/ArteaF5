@@ -925,12 +925,6 @@ text-align: justify; /* Justification */
     text-decoration: underline;
 }
 
-#akhan-gold {
-    scroll-margin-top: 20px; /* Small buffer only */
-    position: relative;
-    padding-top: 20px; /* Small padding instead of large margin */
-    margin-top: -20px; /* Counteract the padding for normal flow */
-}
 
 
 /* 8. Footer & Back to Top */
