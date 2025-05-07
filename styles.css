@@ -930,6 +930,9 @@ text-align: justify; /* Justification */
 #akhan-gold::before {
       margin-top: 500px;   
       display: block;
+    content: '';
+    visibility: hidden;
+    pointer-events: none;
 }
 
 /* 8. Footer & Back to Top */
