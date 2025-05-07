@@ -926,17 +926,12 @@ text-align: justify; /* Justification */
 }
 
 #akhan-gold {
-    scroll-margin-top: 300px; /* Adjust based on your header height */
+    scroll-margin-top: 20px; /* Small buffer only */
     position: relative;
+    padding-top: 20px; /* Small padding instead of large margin */
+    margin-top: -20px; /* Counteract the padding for normal flow */
 }
 
-#akhan-gold::before {
-      margin-top: 800px;   
-      display: block;
-    content: '';
-    visibility: hidden;
-    pointer-events: none;
-}
 
 /* 8. Footer & Back to Top */
 /* ================================================== */
