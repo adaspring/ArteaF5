@@ -140,28 +140,54 @@ function initSubmenus() {
             // Remove arrows from non-submenu items
             const existingArrow = menuItem.querySelector('.submenu-arrow');
             if (existingArrow) existingArrow.remove();
-
-            // Handle section anchors within the same page
-link.addEventListener('click', (e) => {
-    const href = link.getAttribute('href');
+        }
+            
+            
+            // Update URL without full page reload
+                    history.pushState(null, null, href);
+                }
+            });
+        }
+    });
     
-    // If it's an anchor link to the same page
-    if (href && href.startsWith('#') && href !== '#') {
-        e.preventDefault();
-        
-        // Close the menu first
-        const menu = document.getElementById('flyout-menu');
-        if (menu.classList.contains('open')) {
-            toggleMenu();
-        }
-        
-        // Scroll to the section with optimal positioning
-        const targetSection = document.querySelector(href);
-        if (targetSection) {
-            scrollToOptimalPosition(targetSection);
-        }
+    // Ensure the flyout menu is always scrollable when content exceeds viewport
+    ensureMenuScrollability();
+}
+            
+// ======================
+// Enhanced Anchor Links
+// ======================
+/**
 
-        /**
+Handles all anchor links with precise scrolling positioning
+
+Centers the target element in the viewport or positions it optimally
+*/
+function initEnhancedAnchorLinks() {
+// Select all anchor links that point to an ID on the same page
+// But exclude those in the menu system (which are handled separately)
+document.querySelectorAll('a[href^="#"]:not([href="#"]):not(#flyout-menu a)').forEach(link => {
+link.addEventListener('click', function(e) {
+// Prevent default anchor link behavior
+e.preventDefault();
+
+const href = this.getAttribute('href');  
+     const targetElement = document.querySelector(href);  
+
+     if (targetElement) {  
+         // Calculate optimal scroll position  
+         scrollToOptimalPosition(targetElement);  
+
+         // Update URL without page reload  
+         history.pushState(null, null, href);  
+     }  
+ });
+
+});
+}
+
+
+/**
 
 Calculates and scrolls to the optimal position for the target element
 
@@ -203,17 +229,6 @@ window.scrollTo({
 top: scrollOffset,
 behavior: 'smooth'
 });
-}
-        // Update URL without full page reload
-        history.pushState(null, null, href);
-    }
-});
-            
-        }
-    });
-    
-    // Ensure the flyout menu is always scrollable when content exceeds viewport
-    ensureMenuScrollability();
 }
 
 // Add this new function to ensure menu scrollability
@@ -331,11 +346,6 @@ function goToSlide(id, index) {
         });
     }
 }
-
-
-
-
-
 
 
 // ======================
