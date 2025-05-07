@@ -925,18 +925,10 @@ text-align: justify; /* Justification */
     text-decoration: underline;
 }
 
-#akhan-gold {
-    scroll-margin-top: 300px; /* Adjust based on your header height */
-    position: relative;
-}
+
 
 #akhan-gold::before {
-    content: '';
-    display: block;
-    height: 300px; /* Same as scroll-margin-top */
-    margin-top: 300px;
-    visibility: hidden;
-    pointer-events: none;
+      margin-top: 500px;   
 }
 
 /* 8. Footer & Back to Top */
