@@ -495,3 +495,73 @@ function handleSwipe(carousel) {
 // ======================
 // Utility Functions
 // ======================
+   function initBackToTop() {
+    const backToTopButton = document.createElement('a');
+    backToTopButton.className = 'back-to-top';
+    backToTopButton.innerHTML = '↑';
+    backToTopButton.setAttribute('aria-label', 'Back to top');
+    document.body.appendChild(backToTopButton);
+
+    window.addEventListener('scroll', () => {
+        backToTopButton.classList.toggle('visible', window.pageYOffset > 300);
+    });
+
+    backToTopButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
+
+function initLoadingStates() {
+    document.querySelectorAll('.carousel-images img, .grid-item img').forEach(img => {
+        if (!img.complete) img.style.opacity = '0';
+        img.addEventListener('load', () => img.style.opacity = '1');
+        if (img.complete) img.style.opacity = '1';
+    });
+}
+
+
+
+// Theme Toggle Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleButton = document.getElementById('theme-toggle');
+    
+    // Function to apply the theme based on the preference
+    function applyTheme(theme) {
+        if (theme === 'dark') {
+            document.body.classList.add('dark-theme');
+        } else {
+            document.body.classList.remove('dark-theme');
+        }
+    }
+
+    // Check for saved user preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        applyTheme(savedTheme);
+    } else {
+        // No saved preference, check system preference
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const initialTheme = systemPrefersDark ? 'dark' : 'light';
+        applyTheme(initialTheme);
+        localStorage.setItem('theme', initialTheme);
+    }
+
+    // Handle theme toggle
+    toggleButton.addEventListener('click', function() {
+        const newTheme = document.body.classList.contains('dark-theme') ? 'light' : 'dark';
+        applyTheme(newTheme);
+        localStorage.setItem('theme', newTheme);
+    });
+
+    // Listen for system theme changes
+    if (window.matchMedia) {
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            // Only auto-switch if user hasn't manually set preference
+            if (!localStorage.getItem('theme')) {
+                const newTheme = event.matches ? 'dark' : 'light';
+                applyTheme(newTheme);
+            }
+        });
+    }
+});
