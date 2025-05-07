@@ -158,7 +158,11 @@ function initSubmenus() {
                     // Scroll to the section
                     const targetSection = document.querySelector(href);
                     if (targetSection) {
-                        targetSection.scrollIntoView({ behavior: 'smooth' });
+                        const elementTop = targetSection.getBoundingClientRect().top + window.pageYOffset;
+const elementHeight = targetSection.offsetHeight;
+const viewportHeight = window.innerHeight;
+const scrollTo = elementTop - (viewportHeight / 2) + (elementHeight / 2);
+window.scrollTo({ top: scrollTo, behavior: 'smooth' });
                     }
                     
                     // Update URL without full page reload
