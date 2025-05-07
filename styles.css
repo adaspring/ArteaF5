@@ -925,6 +925,11 @@ text-align: justify; /* Justification */
     text-decoration: underline;
 }
 
+#akhan-gold h4 {
+  scroll-margin-top: 120px; /* Adjust based on your header height */
+}
+
+
 /* 8. Footer & Back to Top */
 /* ================================================== */
 footer {
