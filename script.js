@@ -142,29 +142,73 @@ function initSubmenus() {
             if (existingArrow) existingArrow.remove();
 
             // Handle section anchors within the same page
-            link.addEventListener('click', (e) => {
-                const href = link.getAttribute('href');
-                
-                // If it's an anchor link to the same page
-                if (href && href.startsWith('#')) {
-                    e.preventDefault();
-                    
-                    // Close the menu first
-                    const menu = document.getElementById('flyout-menu');
-                    if (menu.classList.contains('open')) {
-                        toggleMenu();
-                    }
-                    
-                    // Scroll to the section
-                    const targetSection = document.querySelector(href);
-                    if (targetSection) {
-                        targetSection.scrollIntoView({ behavior: 'smooth' });
-                    }
-                    
-                    // Update URL without full page reload
-                    history.pushState(null, null, href);
-                }
-            });
+link.addEventListener('click', (e) => {
+    const href = link.getAttribute('href');
+    
+    // If it's an anchor link to the same page
+    if (href && href.startsWith('#') && href !== '#') {
+        e.preventDefault();
+        
+        // Close the menu first
+        const menu = document.getElementById('flyout-menu');
+        if (menu.classList.contains('open')) {
+            toggleMenu();
+        }
+        
+        // Scroll to the section with optimal positioning
+        const targetSection = document.querySelector(href);
+        if (targetSection) {
+            scrollToOptimalPosition(targetSection);
+        }
+
+        /**
+
+Calculates and scrolls to the optimal position for the target element
+
+@param {HTMLElement} targetElement - The element to scroll to
+*/
+function scrollToOptimalPosition(targetElement) {
+// Get element's position relative to the viewport
+const rect = targetElement.getBoundingClientRect();
+
+// Get current scroll position
+const currentScrollPos = window.pageYOffset || document.documentElement.scrollTop;
+
+// Calculate element's absolute position on the page
+const absoluteElementTop = rect.top + currentScrollPos;
+
+// Get viewport height
+const viewportHeight = window.innerHeight;
+
+// Check if we have a fixed header and get its height
+// Replace '.header' with your actual header selector if different
+const header = document.querySelector('header') || document.querySelector('.header');
+const headerHeight = header && header.getBoundingClientRect().height || 0;
+
+// Calculate ideal position:
+// If element is small, center it in viewport
+// If element is large, position it near the top with appropriate padding
+let scrollOffset;
+
+if (rect.height < viewportHeight * 0.7) {
+// For smaller elements, center them in the viewport
+scrollOffset = absoluteElementTop - (viewportHeight / 2) + (rect.height / 2);
+} else {
+// For larger elements, position them at the top with some padding
+scrollOffset = absoluteElementTop - headerHeight - 20; // 20px additional padding
+}
+
+// Perform the scroll with smooth behavior
+window.scrollTo({
+top: scrollOffset,
+behavior: 'smooth'
+});
+}
+        // Update URL without full page reload
+        history.pushState(null, null, href);
+    }
+});
+            
         }
     });
     
@@ -639,4 +683,5 @@ document.addEventListener('DOMContentLoaded', () => {
     addTouchSupport();
     initLoadingStates();
     setupIndependentScrolling();
+    initEnhancedAnchorLinks();
 });
