@@ -142,29 +142,29 @@ function initSubmenus() {
             if (existingArrow) existingArrow.remove();
 
             // Handle section anchors within the same page
-            link.addEventListener('click', (e) => {
-                const href = link.getAttribute('href');
-                
-                // If it's an anchor link to the same page
-                if (href && href.startsWith('#')) {
-                    e.preventDefault();
-                    
-                    // Close the menu first
-                    const menu = document.getElementById('flyout-menu');
-                    if (menu.classList.contains('open')) {
-                        toggleMenu();
-                    }
-                    
-                    // Scroll to the section
-                    const targetSection = document.querySelector(href);
-                    if (targetSection) {
-                        targetSection.scrollIntoView({ behavior: 'smooth' });
-                    }
-                    
-                    // Update URL without full page reload
-                    history.pushState(null, null, href);
-                }
-            });
+link.addEventListener('click', (e) => {
+    const href = link.getAttribute('href');
+    
+    // If it's an anchor link to the same page
+    if (href && href.startsWith('#') && href !== '#') {
+        e.preventDefault();
+        
+        // Close the menu first
+        const menu = document.getElementById('flyout-menu');
+        if (menu.classList.contains('open')) {
+            toggleMenu();
+        }
+        
+        // Scroll to the section with optimal positioning
+        const targetSection = document.querySelector(href);
+        if (targetSection) {
+            scrollToOptimalPosition(targetSection);
+        }
+        
+        // Update URL without full page reload
+        history.pushState(null, null, href);
+            }
+         });
         }
     });
     
@@ -639,4 +639,5 @@ document.addEventListener('DOMContentLoaded', () => {
     addTouchSupport();
     initLoadingStates();
     setupIndependentScrolling();
+    initEnhancedAnchorLinks();
 });
