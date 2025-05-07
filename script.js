@@ -622,35 +622,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // ======================
-// Precise Smooth Scrolling for Info Links
-// ======================
-function initSmoothScrolling() {
-    document.querySelectorAll('a[href="#akhan-gold"]').forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetSection = document.getElementById('akhan-gold');
-            if (targetSection) {
-                const headerHeight = document.querySelector('header').offsetHeight;
-                const windowHeight = window.innerHeight;
-                const targetRect = targetSection.getBoundingClientRect();
-                
-                // Calculate position to center the section in viewport
-                const scrollPosition = window.pageYOffset + targetRect.top - 
-                                      (windowHeight / 2) + (targetRect.height / 2) - 
-                                      headerHeight;
-                
-                window.scrollTo({
-                    top: scrollPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-}
-
-
-
-// ======================
 // Unified Initialization
 // ======================
 document.addEventListener('DOMContentLoaded', () => {
