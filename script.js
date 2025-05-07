@@ -621,27 +621,32 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-// smooth scrolling update
-document.addEventListener('DOMContentLoaded', function() {
-    // Handle smooth scrolling for info links
+// ======================
+// Precise Smooth Scrolling for Info Links
+// ======================
+function initSmoothScrolling() {
     document.querySelectorAll('a[href="#akhan-gold"]').forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const targetSection = document.getElementById('akhan-gold');
             if (targetSection) {
-                // Calculate the exact position to scroll to
                 const headerHeight = document.querySelector('header').offsetHeight;
-                const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                const windowHeight = window.innerHeight;
+                const targetRect = targetSection.getBoundingClientRect();
                 
-                // Use smooth scrolling
+                // Calculate position to center the section in viewport
+                const scrollPosition = window.pageYOffset + targetRect.top - 
+                                      (windowHeight / 2) + (targetRect.height / 2) - 
+                                      headerHeight;
+                
                 window.scrollTo({
-                    top: targetPosition,
+                    top: scrollPosition,
                     behavior: 'smooth'
                 });
             }
         });
     });
-});
+}
 
 
 
