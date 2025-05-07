@@ -931,7 +931,7 @@ text-align: justify; /* Justification */
 }
 
 #akhan-gold::before {
-      margin-top: 500px;   
+      margin-top: 800px;   
       display: block;
     content: '';
     visibility: hidden;
