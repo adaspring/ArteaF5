@@ -58,13 +58,22 @@ a:hover {
 }
 
 
+
 /* HEADER CONTROLS */
 /* ================================================== */
 .header-controls {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap: 0.5rem;
   justify-content: flex-end;
+  flex-direction: column; /* Stack in two rows */
+}
+
+/* First row: theme toggle + hamburger menu */
+.top-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .theme-toggle-wrapper {
@@ -115,17 +124,13 @@ body.dark-theme .theme-toggle {
   color: #CCD5AE;
 }
 
-
 .language-switcher {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  gap: 0.1rem 0.3rem; /* row-gap (vertical) is 0.1rem, column-gap is 0.3rem */
+  display: flex; /* Changed from grid to flex */
+  align-items: center; /* Added for proper vertical alignment */
+  gap: 0.3rem; /* Simplified gap */
   font-size: 0.7rem;
-  align-items: center;
-  justify-items: center;
+  justify-content: flex-end; /* Align to right like other controls */
 }
-
-
 
 .lang-separator {
   margin: 0 0.1rem;
@@ -156,6 +161,16 @@ body.dark-theme .theme-toggle {
 .hamburger-menu:hover {
   transform: scale(1.1);
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
