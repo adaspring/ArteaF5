@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+  <!-- Google tag (gtag.js) -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-S8Z64W5M39">
+  </script>
+  <script>
+   window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-S8Z64W5M39');
+  </script>
+  <!-- meta equal for each html page -->
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <!-- meta most important different each page -->
+  <meta content="ARTEAK - Explore el auténtico arte africano, incluidas las terracotas Nok, los bronces Akhan y los artefactos rituales Vodun con certificados de autenticidad." name="description"/>
+  <meta content="Colección de arte africano, terracotas de Nok, bronces de Akhan, artefactos vodún, arte tribal auténtico, galería de esculturas africanas" name="keywords"/>
+  <meta content="ARTEAK - Auténtica colección de arte africano" property="og:title"/>
+  <title>
+   ARTEAK - Auténtica colección de arte africano
+  </title>
+  <meta content="https://artea.netlify.app" property="og:url"/>
+  <!-- meta different for each html page -->
+  <meta content="Galería ARTEAK" name="author"/>
+  <meta content="Descubra obras de arte africanas certificadas, como antiguas esculturas Nok, bronces ceremoniales y artefactos espirituales de las tradiciones de África Occidental." property="og:description"/>
+  <meta content="website" property="og:type"/>
+  <meta content="https://res.cloudinary.com/dc0pgvkii/image/upload/large-man-bust-2_ot6ztc.jpg" property="og:image"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <!-- equal in each html page -->
+  <link href="https://artea.netlify.app" rel="canonical"/>
+  <link href="styles.css" rel="stylesheet"/>
+  <link href="dark-theme.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://artea.netlify.app/index.html" hreflang="en" rel="alternate"/>
+  <link href="https://artea.netlify.app/index-fr.html" hreflang="fr" rel="alternate"/>
+  <link href="https://artea.netlify.app/index-es.html" hreflang="es" rel="alternate"/>
+  <link href="https://artea.netlify.app/index-zh-CN.html" hreflang="zh-CN" rel="alternate"/>
+  <link href="https://artea.netlify.app/index-zh-TW.html" hreflang="zh-TW" rel="alternate"/>
+  <script type="application/ld+json">
+   {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "ARTEAK Colección de arte africano",
+  "description": "Galería de auténticas obras de arte africanas, como terracotas Nok, bronces Akhan y artefactos rituales Vodun.",
+  "url": "https://artea.netlify.app",
+  "image": [
+    "https://res.cloudinary.com/dc0pgvkii/image/upload/large-man-bust-2_ot6ztc.jpg",
+    "https://res.cloudinary.com/dc0pgvkii/image/upload/v1745027123/sun-akhan-weight-ivory-coast-2_j7ti9q.jpg",
+    "https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-2_vobhbg.jpg"
+  ],
+  "mainEntity": [
+    {
+      "@type": "Collection",
+      "name": "Nok Terracottas",
+      "description": "Antiguas esculturas de terracota de la cultura Nok de Nigeria (500 a.C.-200 d.C.)",
+      "url": "https://artea.netlify.app/nok-terracottas.html"
+    },
+    {
+      "@type": "Collection",
+      "name": "Bronces africanos",
+      "description": "Objetos ceremoniales de bronce de África Occidental, incluidas pesas y cucharas Akhan (siglos XVII-XX)",
+      "url": "https://artea.netlify.app/african-bronzes.html"
+    },
+    {
+      "@type": "Collection",
+      "name": "Artefactos rituales",
+      "description": "Figuras de poder vudú y objetos espirituales de la región de Benín/Togo (siglo XX)",
+      "url": "https://artea.netlify.app/traditional-artifacts.html"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Galería ARTEAK",
+    "url": "https://artea.netlify.app"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://artea.netlify.app"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+   {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://artea.netlify.app"
+    }
+  ]
+}
+  </script>
+ </head>
+ <body>
+  <header>
+   <h1>
+    <a href="index-es.html">
+     ARTEAK
+    </a>
+   </h1>
+   <div class="header-controls">
+    <!-- Top row: Theme toggle + Hamburger menu -->
+    <div class="top-row">
+     <div class="theme-toggle-wrapper">
+      <span class="theme-label">
+       oscuro | claro
+      </span>
+      <button aria-label="Conmutar modo oscuro/claro" class="theme-toggle" id="theme-toggle">
+       🌓
+      </button>
+     </div>
+     <div aria-label="Menú" class="hamburger-menu" onclick="toggleMenu()">
+      ☰
+     </div>
+    </div>
+    <!-- Bottom row: Language switcher -->
+    <div class="language-switcher">
+     <a aria-label="English version" href="index.html">
+      EN
+     </a>
+     <span class="lang-separator">
+      |
+     </span>
+     <a aria-label="Version française" href="index-fr.html">
+      FR
+     </a>
+     <span class="lang-separator">
+      |
+     </span>
+     <a aria-label="Versión en español" class="active" href="index-es.html">
+      ES
+     </a>
+     <span class="lang-separator">
+      |
+     </span>
+     <a aria-label="简体中文版本" href="index-zh.html">
+      ZH
+     </a>
+    </div>
+   </div>
+  </header>
+  <div class="breadcrumb">
+   <a class="active" href="index-es.html">
+    Inicio
+   </a>
+  </div>
+  <!-- Updated Flyout Menu -->
+  <nav class="hidden" id="flyout-menu">
+   <div class="menu-close-btn" onclick="toggleMenu()">
+    ×
+   </div>
+   <ul>
+    <li>
+     <a href="index-es.html">
+      Inicio
+     </a>
+    </li>
+    <li>
+     <a class="active" href="nok-terracottas-es.html">
+      Nok Terracottas
+     </a>
+     <ul class="submenu">
+      <li>
+       <a href="large-man-bust-es.html">
+        Figura de Hombre Grande
+       </a>
+      </li>
+      <li>
+       <a href="short-man-bust-es.html">
+        Figura de Hombre Pequeño
+       </a>
+      </li>
+      <li>
+       <a href="man-head-es.html">
+        Cabeza de hombre
+       </a>
+      </li>
+      <li>
+       <a href="nok-terracottas-es.html#about-nok">
+        Acerca de Nok
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <a href="african-bronzes-es.html">
+      Bronces africanos
+     </a>
+     <ul class="submenu">
+      <li>
+       <a href="akhan-spoon-es.html">
+        Cuchara
+       </a>
+      </li>
+      <li>
+       <a href="sun-akhan-weight-es.html">
+        Sol
+       </a>
+      </li>
+      <li>
+       <a href="twins-akhan-weight-es.html">
+        Gemelos
+       </a>
+      </li>
+      <li>
+       <a href="snake-akhan-weight-es.html">
+        Serpiente
+       </a>
+      </li>
+      <li>
+       <a href="african-bronzes-es.html#about-bronzes">
+        Acerca de los bronces
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <a href="traditional-artifacts-es.html">
+      Artefactos rituales
+     </a>
+     <ul class="submenu">
+      <li>
+       <a href="bocio-fetiche-es.html">
+        Bōcio/Fetiche
+       </a>
+      </li>
+      <li>
+       <a href="traditional-artifacts-es.html#about-artifacts">
+        Acerca de los artefactos
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <a href="index-es.html#about">
+      Acerca de ARTEAK
+     </a>
+    </li>
+    <li>
+     <a href="index-es.html#contact">
+      Contacto
+     </a>
+    </li>
+   </ul>
+  </nav>
+  <main>
+   <!-- Nok Terracottas Section -->
+   <section class="carousel-container" id="nok-section">
+    <h2>
+     <a href="nok-terracottas-es.html">
+      Nok Terracottas
+     </a>
+    </h2>
+    <div class="carousel">
+     <button aria-label="Imagen anterior" onclick="updateCarousel('nok', 'prev')" tabindex="0">
+      <span class="sr-only">
+       Anterior
+      </span>
+     </button>
+     <div class="carousel-images" data-index="0" id="items-nok">
+      <img alt="Hermosa cabeza de terracota de Nok" height="600" loading="lazy" sizes="(max-width: 768px) 90vw, 50vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-3_vtbj8q.jpg?w=800&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-3_vtbj8q.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-3_vtbj8q.jpg?w=800&amp;f_auto,q_auto,dpr_auto 800w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-3_vtbj8q.jpg?w=1200&amp;f_auto,q_auto,dpr_auto 1200w
+    " style="aspect-ratio: 4/3" width="800"/>
+      <img alt="Busto Nok de terracota con manos y barba" height="600" loading="lazy" sizes="(max-width: 768px) 90vw, 50vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/large-man-bust-2_ot6ztc.jpg?w=800&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/large-man-bust-2_ot6ztc.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/large-man-bust-2_ot6ztc.jpg?w=800&amp;f_auto,q_auto,dpr_auto 800w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/large-man-bust-2_ot6ztc.jpg?w=1200&amp;f_auto,q_auto,dpr_auto 1200w
+    " style="aspect-ratio: 4/3" width="800"/>
+      <img alt="Certificado de termoluminiscencia 2009" height="600" loading="lazy" sizes="(max-width: 768px) 90vw, 50vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-thermoluminescence-certificate_vfppn9.jpg?w=800&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-thermoluminescence-certificate_vfppn9.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-thermoluminescence-certificate_vfppn9.jpg?w=800&amp;f_auto,q_auto,dpr_auto 800w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-thermoluminescence-certificate_vfppn9.jpg?w=1200&amp;f_auto,q_auto,dpr_auto 1200w
+    " style="aspect-ratio: 4/3" width="800"/>
+      <img alt="Busto de terracota Nok" height="600" loading="lazy" sizes="(max-width: 768px) 90vw, 50vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/short-man-bust-1_tcjwom.jpg?w=800&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/short-man-bust-1_tcjwom.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/short-man-bust-1_tcjwom.jpg?w=800&amp;f_auto,q_auto,dpr_auto 800w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/short-man-bust-1_tcjwom.jpg?w=1200&amp;f_auto,q_auto,dpr_auto 1200w
+    " style="aspect-ratio: 4/3" width="800"/>
+      <img alt="Magnífico busto de terracota de Nok" height="600" loading="lazy" sizes="(max-width: 768px) 90vw, 50vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/large-man-bust-4_xbm3sy.jpg?w=800&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/large-man-bust-4_xbm3sy.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/large-man-bust-4_xbm3sy.jpg?w=800&amp;f_auto,q_auto,dpr_auto 800w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/large-man-bust-4_xbm3sy.jpg?w=1200&amp;f_auto,q_auto,dpr_auto 1200w
+    " style="aspect-ratio: 4/3" width="800"/>
+      <img alt="Busto mágico Nok de terracota con gorro" height="600" loading="lazy" sizes="(max-width: 768px) 90vw, 50vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/short-man-bust-3_r0ooec.jpg?w=800&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/short-man-bust-3_r0ooec.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/short-man-bust-3_r0ooec.jpg?w=800&amp;f_auto,q_auto,dpr_auto 800w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/short-man-bust-3_r0ooec.jpg?w=1200&amp;f_auto,q_auto,dpr_auto 1200w
+    " style="aspect-ratio: 4/3" width="800"/>
+      <img alt="Cabeza Nok de terracota con barba" height="600" loading="lazy" sizes="(max-width: 768px) 90vw, 50vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-7_zpfgqs.jpg?w=800&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-7_zpfgqs.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-7_zpfgqs.jpg?w=800&amp;f_auto,q_auto,dpr_auto 800w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-7_zpfgqs.jpg?w=1200&amp;f_auto,q_auto,dpr_auto 1200w
+    " style="aspect-ratio: 4/3" width="800"/>
+     </div>
+     <button aria-label="Imagen siguiente" onclick="updateCarousel('nok', 'next')" tabindex="0">
+      <span class="sr-only">
+       Siguiente
+      </span>
+     </button>
+    </div>
+    <div class="carousel-thumbnails" id="thumbs-nok">
+     <img alt="Pulgar 1" class="active-thumb" onclick="goToSlide('nok', 0)" sizes="(max-width: 600px) 30vw, (max-width: 1200px) 15vw, 10vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-3_vtbj8q.jpg?w=200&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-3_vtbj8q.jpg?w=100&amp;f_auto,q_auto,dpr_auto 100w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-3_vtbj8q.jpg?w=200&amp;f_auto,q_auto,dpr_auto 200w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-3_vtbj8q.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w
+  "/>
+     <img alt="Pulgar 2" onclick="goToSlide('nok', 1)" sizes="(max-width: 600px) 30vw, (max-width: 1200px) 15vw, 10vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/large-man-bust-2_ot6ztc.jpg?w=200&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/large-man-bust-2_ot6ztc.jpg?w=100&amp;f_auto,q_auto,dpr_auto 100w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/large-man-bust-2_ot6ztc.jpg?w=200&amp;f_auto,q_auto,dpr_auto 200w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/large-man-bust-2_ot6ztc.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w
+  "/>
+     <img alt="Pulgar 3" onclick="goToSlide('nok', 2)" sizes="(max-width: 600px) 30vw, (max-width: 1200px) 15vw, 10vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-thermoluminescence-certificate_vfppn9.jpg?w=200&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-thermoluminescence-certificate_vfppn9.jpg?w=100&amp;f_auto,q_auto,dpr_auto 100w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-thermoluminescence-certificate_vfppn9.jpg?w=200&amp;f_auto,q_auto,dpr_auto 200w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-thermoluminescence-certificate_vfppn9.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w
+  "/>
+     <img alt="Pulgar 4" onclick="goToSlide('nok', 3)" sizes="(max-width: 600px) 30vw, (max-width: 1200px) 15vw, 10vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/short-man-bust-1_tcjwom.jpg?w=200&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/short-man-bust-1_tcjwom.jpg?w=100&amp;f_auto,q_auto,dpr_auto 100w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/short-man-bust-1_tcjwom.jpg?w=200&amp;f_auto,q_auto,dpr_auto 200w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/short-man-bust-1_tcjwom.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w
+  "/>
+     <img alt="Pulgar 5" onclick="goToSlide('nok', 4)" sizes="(max-width: 600px) 30vw, (max-width: 1200px) 15vw, 10vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/large-man-bust-4_xbm3sy.jpg?w=200&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/large-man-bust-4_xbm3sy.jpg?w=100&amp;f_auto,q_auto,dpr_auto 100w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/large-man-bust-4_xbm3sy.jpg?w=200&amp;f_auto,q_auto,dpr_auto 200w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/large-man-bust-4_xbm3sy.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w
+  "/>
+     <img alt="Pulgar 6" onclick="goToSlide('nok', 5)" sizes="(max-width: 600px) 30vw, (max-width: 1200px) 15vw, 10vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/short-man-bust-3_r0ooec.jpg?w=200&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/short-man-bust-3_r0ooec.jpg?w=100&amp;f_auto,q_auto,dpr_auto 100w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/short-man-bust-3_r0ooec.jpg?w=200&amp;f_auto,q_auto,dpr_auto 200w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/short-man-bust-3_r0ooec.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w
+  "/>
+     <img alt="Pulgar 7" class="active-thumb" onclick="goToSlide('nok', 6)" sizes="(max-width: 600px) 30vw, (max-width: 1200px) 15vw, 10vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-7_zpfgqs.jpg?w=200&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-7_zpfgqs.jpg?w=100&amp;f_auto,q_auto,dpr_auto 100w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-7_zpfgqs.jpg?w=200&amp;f_auto,q_auto,dpr_auto 200w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-7_zpfgqs.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w
+  "/>
+    </div>
+    <p class="category-description">
+     Con rasgos audaces y formas expresivas, las terracotas Nok muestran un notable dominio de la arcilla en el arte africano primitivo, entre 1500 a.C. y 500 d.C. aproximadamente. Su refinada simetría y sus intrincados detalles hablan de una sofisticada tradición escultórica. Cada figura es un testimonio tanto de habilidad técnica como de visión artística.
+     <a class="accent-link" href="nok-terracottas-es.html">
+      +explore
+     </a>
+    </p>
+   </section>
+   <!-- African Bronzes Section -->
+   <section class="carousel-container" id="bronzes-section">
+    <h2>
+     <a href="african-bronzes-es.html">
+      Bronces africanos
+     </a>
+    </h2>
+    <div class="carousel">
+     <button aria-label="Imagen anterior" onclick="updateCarousel('bronzes', 'prev')" tabindex="0">
+      ←
+     </button>
+     <div class="carousel-images" data-index="0" id="items-bronzes">
+      <img <img="" alt="Sol akhan de bronce con rayos de sol en forma de serpiente" height="600" loading="lazy" sizes="(max-width: 768px) 90vw, 50vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/v1745027123/sun-akhan-weight-ivory-coast-2_j7ti9q.jpg?w=800&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/v1745027123/sun-akhan-weight-ivory-coast-2_j7ti9q.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/v1745027123/sun-akhan-weight-ivory-coast-2_j7ti9q.jpg?w=800&amp;f_auto,q_auto,dpr_auto 800w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/v1745027123/sun-akhan-weight-ivory-coast-2_j7ti9q.jpg?w=1200&amp;f_auto,q_auto,dpr_auto 1200w
+    " style="aspect-ratio: 4/3" width="800"/>
+      <img alt="Bronce de akhan de serpiente" height="600" loading="lazy" sizes="(max-width: 768px) 90vw, 50vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/snake-akhan-weight-3_zkvbky.jpg?w=800&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/snake-akhan-weight-3_zkvbky.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/snake-akhan-weight-3_zkvbky.jpg?w=800&amp;f_auto,q_auto,dpr_auto 800w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/snake-akhan-weight-3_zkvbky.jpg?w=1200&amp;f_auto,q_auto,dpr_auto 1200w
+    " style="aspect-ratio: 4/3" width="800"/>
+      <img alt="Preciosa cuchara de bronce akhan" height="600" loading="lazy" sizes="(max-width: 768px) 90vw, 50vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/akhan-spoon-4_ynnkkl.jpg?w=800&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/akhan-spoon-4_ynnkkl.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/akhan-spoon-4_ynnkkl.jpg?w=800&amp;f_auto,q_auto,dpr_auto 800w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/akhan-spoon-4_ynnkkl.jpg?w=1200&amp;f_auto,q_auto,dpr_auto 1200w
+    " style="aspect-ratio: 4/3" width="800"/>
+      <img alt="Hermoso peso akhan con magnífica pátina" height="600" loading="lazy" sizes="(max-width: 768px) 90vw, 50vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/twins-akhan-weight-1_zwydtt.jpg?w=800&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/twins-akhan-weight-1_zwydtt.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/twins-akhan-weight-1_zwydtt.jpg?w=800&amp;f_auto,q_auto,dpr_auto 800w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/twins-akhan-weight-1_zwydtt.jpg?w=1200&amp;f_auto,q_auto,dpr_auto 1200w
+    " style="aspect-ratio: 4/3" width="800"/>
+      <img alt="Ejemplo de certificado de autenticidad" height="600" loading="lazy" sizes="(max-width: 768px) 90vw, 50vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/sun-akhan-weight-ivory-coast-certificate_hvxvao.jpg?w=800&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/sun-akhan-weight-ivory-coast-certificate_hvxvao.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/sun-akhan-weight-ivory-coast-certificate_hvxvao.jpg?w=800&amp;f_auto,q_auto,dpr_auto 800w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/sun-akhan-weight-ivory-coast-certificate_hvxvao.jpg?w=1200&amp;f_auto,q_auto,dpr_auto 1200w
+    " style="aspect-ratio: 4/3" width="800"/>
+     </div>
+     <button aria-label="Imagen siguiente" onclick="updateCarousel('bronzes', 'next')" tabindex="0">
+      →
+     </button>
+    </div>
+    <div class="carousel-thumbnails" id="thumbs-bronzes">
+     <img alt="Pulgar 1" class="active-thumb" onclick="goToSlide('bronzes', 0)" sizes="(max-width: 600px) 30vw, (max-width: 1200px) 15vw, 10vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/v1745027123/sun-akhan-weight-ivory-coast-2_j7ti9q.jpg?w=200&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/v1745027123/sun-akhan-weight-ivory-coast-2_j7ti9q.jpg?w=100&amp;f_auto,q_auto,dpr_auto 100w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/v1745027123/sun-akhan-weight-ivory-coast-2_j7ti9q.jpg?w=200&amp;f_auto,q_auto,dpr_auto 200w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/v1745027123/sun-akhan-weight-ivory-coast-2_j7ti9q.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w
+  "/>
+     <img alt="Pulgar 2" onclick="goToSlide('bronzes', 1)" sizes="(max-width: 600px) 30vw, (max-width: 1200px) 15vw, 10vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/snake-akhan-weight-3_zkvbky.jpg?w=200&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/snake-akhan-weight-3_zkvbky.jpg?w=100&amp;f_auto,q_auto,dpr_auto 100w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/snake-akhan-weight-3_zkvbky.jpg?w=200&amp;f_auto,q_auto,dpr_auto 200w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/snake-akhan-weight-3_zkvbky.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w
+  "/>
+     <img alt="Pulgar 3" onclick="goToSlide('bronzes', 2)" sizes="(max-width: 600px) 30vw, (max-width: 1200px) 15vw, 10vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/akhan-spoon-4_ynnkkl.jpg?w=200&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/akhan-spoon-4_ynnkkl.jpg?w=100&amp;f_auto,q_auto,dpr_auto 100w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/akhan-spoon-4_ynnkkl.jpg?w=200&amp;f_auto,q_auto,dpr_auto 200w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/akhan-spoon-4_ynnkkl.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w
+  "/>
+     <img alt="Pulgar 4" onclick="goToSlide('bronzes', 3)" sizes="(max-width: 600px) 30vw, (max-width: 1200px) 15vw, 10vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/twins-akhan-weight-1_zwydtt.jpg?w=200&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/twins-akhan-weight-1_zwydtt.jpg?w=100&amp;f_auto,q_auto,dpr_auto 100w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/twins-akhan-weight-1_zwydtt.jpg?w=200&amp;f_auto,q_auto,dpr_auto 200w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/twins-akhan-weight-1_zwydtt.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w
+  "/>
+     <img alt="Pulgar 5" onclick="goToSlide('bronzes', 4)" sizes="(max-width: 600px) 30vw, (max-width: 1200px) 15vw, 10vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/sun-akhan-weight-ivory-coast-certificate_hvxvao.jpg?w=200&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/sun-akhan-weight-ivory-coast-certificate_hvxvao.jpg?w=100&amp;f_auto,q_auto,dpr_auto 100w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/sun-akhan-weight-ivory-coast-certificate_hvxvao.jpg?w=200&amp;f_auto,q_auto,dpr_auto 200w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/sun-akhan-weight-ivory-coast-certificate_hvxvao.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w
+  "/>
+    </div>
+    <p class="category-description">
+     Magistrales piezas de bronce de África Occidental, siglos XIX-XX. Más allá de su función como medidas de oro, estas pesas akan encarnan un profundo arte, donde la utilidad se une a la maestría estética. A través de sus intrincadas formas, conservan el legado de una cultura en la que la artesanía, el simbolismo y la vida cotidiana estaban estrechamente entrelazados.
+     <a class="accent-link" href="african-bronzes-es.html">
+      +explore
+     </a>
+    </p>
+   </section>
+   <!-- Traditional Artifacts Section -->
+   <section class="carousel-container" id="fetishes-section">
+    <h2>
+     <a href="traditional-artifacts-es.html">
+      Artefactos rituales
+     </a>
+    </h2>
+    <div class="carousel">
+     <button aria-label="Imagen anterior" onclick="updateCarousel('fetishes', 'prev')" tabindex="0">
+      ←
+     </button>
+     <div class="carousel-images" data-index="0" id="items-fetishes">
+      <img alt="Beutiful Fetiche" height="600" loading="lazy" sizes="(max-width: 768px) 90vw, 50vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-1_vkzh5j.jpg?w=800&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-1_vkzh5j.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-1_vkzh5j.jpg?w=800&amp;f_auto,q_auto,dpr_auto 800w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-1_vkzh5j.jpg?w=1200&amp;f_auto,q_auto,dpr_auto 1200w
+    " style="aspect-ratio: 4/3" width="800"/>
+      <img alt="Fetiche con una hermosa pátina de uso" height="600" loading="lazy" sizes="(max-width: 768px) 90vw, 50vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-2_vobhbg.jpg?w=800&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-2_vobhbg.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-2_vobhbg.jpg?w=800&amp;f_auto,q_auto,dpr_auto 800w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-2_vobhbg.jpg?w=1200&amp;f_auto,q_auto,dpr_auto 1200w
+    " style="aspect-ratio: 4/3" width="800"/>
+      <img alt="Beutiful Fetiche" height="600" loading="lazy" sizes="(max-width: 768px) 90vw, 50vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-3_tgwbpv.jpg?w=800&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-3_tgwbpv.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-3_tgwbpv.jpg?w=800&amp;f_auto,q_auto,dpr_auto 800w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-3_tgwbpv.jpg?w=1200&amp;f_auto,q_auto,dpr_auto 1200w
+    " style="aspect-ratio: 4/3" width="800"/>
+     </div>
+     <button aria-label="Imagen siguiente" onclick="updateCarousel('fetishes', 'next')" tabindex="0">
+      →
+     </button>
+    </div>
+    <div class="carousel-thumbnails" id="thumbs-fetishes">
+     <img alt="Pulgar 1" class="active-thumb" onclick="goToSlide('fetishes', 0)" sizes="(max-width: 600px) 30vw, (max-width: 1200px) 15vw, 10vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-1_vkzh5j.jpg?w=200&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-1_vkzh5j.jpg?w=100&amp;f_auto,q_auto,dpr_auto 100w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-1_vkzh5j.jpg?w=200&amp;f_auto,q_auto,dpr_auto 200w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-1_vkzh5j.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w
+  "/>
+     <img alt="Pulgar 2" onclick="goToSlide('fetishes', 1)" sizes="(max-width: 600px) 30vw, (max-width: 1200px) 15vw, 10vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-2_vobhbg.jpg?w=200&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-2_vobhbg.jpg?w=100&amp;f_auto,q_auto,dpr_auto 100w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-2_vobhbg.jpg?w=200&amp;f_auto,q_auto,dpr_auto 200w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-2_vobhbg.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w
+  "/>
+     <img alt="Pulgar 3" onclick="goToSlide('fetishes', 2)" sizes="(max-width: 600px) 30vw, (max-width: 1200px) 15vw, 10vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-3_tgwbpv.jpg?w=200&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-3_tgwbpv.jpg?w=100&amp;f_auto,q_auto,dpr_auto 100w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-3_tgwbpv.jpg?w=200&amp;f_auto,q_auto,dpr_auto 200w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-3_tgwbpv.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w
+  "/>
+    </div>
+    <p class="category-description">
+     Arraigados en ceremonias y creencias, estos objetos rituales reflejan el impulso humano común de conectar con lo invisible. Ya sean talladas, fundidas o ensambladas, sus formas canalizan fuerzas más allá de lo material: median entre mundos, guían ritos o custodian lo sagrado. Cada pieza encierra un significado moldeado por la devoción, el misterio, el poder perdurable del símbolo y el ritual, y la tranquila maestría de la propia artesanía.
+     <a class="accent-link" href="traditional-artifacts-es.html">
+      +explore
+     </a>
+    </p>
+   </section>
+   <!-- About Section -->
+   <section class="content-section" id="about">
+    <h2>
+     Acerca de ARTEAK
+    </h2>
+    <p>
+     Soy un coleccionista aficionado con una creciente pasión por las artes tribales y primitivas, la arqueología y las historias que encarnan. Cada pieza ofrece una nueva oportunidad de aprender sobre las culturas, técnicas y tradiciones que le dieron forma, y afronto este viaje con humildad y curiosidad. Dividiendo mi tiempo entre París y Andorra, aporto a esta pasión una formación en química, que influye en mi forma de observar y apreciar estas obras, desde la complejidad de sus técnicas hasta las transformaciones provocadas por la edad, la corrosión y el paso del tiempo. Con esta colección espero no sólo reunir objetos, sino también profundizar en el conocimiento de las culturas y la artesanía que representan.
+    </p>
+   </section>
+   <div class="subsection">
+    <h4>
+     Consultas y oportunidades
+    </h4>
+    <p>
+     Este sitio web sirve de espacio para presentar mi aún modesta colección, compartir mi entusiasmo por estas formas de arte, enriquecer la colección con el tiempo y establecer conexiones significativas. Con esta intención, son bienvenidas las manifestaciones de interés, las consultas sobre adquisición, intercambio u otras formas de compromiso.
+    </p>
+   </div>
+  </main>
+  <!-- Contact Footer -->
+  <footer id="contact">
+   <h2>
+    Contacto
+   </h2>
+   <div class="social-container">
+    <a aria-label="Visitar Instagram" class="social-icon" href="https://www.instagram.com/yourusername/" rel="noopener noreferrer" target="_blank">
+     <i class="fab fa-instagram">
+     </i>
+    </a>
+    <a aria-label="Correo electrónico" class="social-icon" href="mailto:your@email.com" rel="noopener noreferrer" target="_blank">
+     <i class="fas fa-envelope">
+     </i>
+    </a>
+   </div>
+   <p class="copyright">
+    © 2025 Colección ARTEAK. Todos los derechos reservados.
+   </p>
+   <a href="#top">
+    ↑ Volver arriba
+   </a>
+  </footer>
+  <script src="script.js">
+  </script>
+  <script src="theme-toggle.js">
+  </script>
+ </body>
+</html>
