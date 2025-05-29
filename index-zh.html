@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="zh">
+ <head>
+  <!-- Google tag (gtag.js) -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-S8Z64W5M39">
+  </script>
+  <script>
+   window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-S8Z64W5M39');
+  </script>
+  <!-- meta equal for each html page -->
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <!-- meta most important different each page -->
+  <meta content="ARTEAK - 探索真正的非洲艺术品，包括诺克陶器、阿坎青铜器和附有鉴定证书的沃顿仪式工艺品" name="description"/>
+  <meta content="非洲艺术收藏品、诺克陶器、阿坎青铜器、伏登文物、正宗部落艺术品、非洲雕塑画廊" name="keywords"/>
+  <meta content="ARTEAK - 非洲艺术真品收藏" property="og:title"/>
+  <title>
+   ARTEAK - 非洲艺术真品收藏
+  </title>
+  <meta content="https://artea.netlify.app" property="og:url"/>
+  <!-- meta different for each html page -->
+  <meta content="ARTEAK 画廊" name="author"/>
+  <meta content="探索经过认证的非洲艺术品，包括古代诺克雕塑、礼仪用青铜器和西非传统的精神工艺品" property="og:description"/>
+  <meta content="website" property="og:type"/>
+  <meta content="https://res.cloudinary.com/dc0pgvkii/image/upload/large-man-bust-2_ot6ztc.jpg" property="og:image"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <!-- equal in each html page -->
+  <link href="https://artea.netlify.app" rel="canonical"/>
+  <link href="styles.css" rel="stylesheet"/>
+  <link href="dark-theme.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://artea.netlify.app/index.html" hreflang="en" rel="alternate"/>
+  <link href="https://artea.netlify.app/index-fr.html" hreflang="fr" rel="alternate"/>
+  <link href="https://artea.netlify.app/index-es.html" hreflang="es" rel="alternate"/>
+  <link href="https://artea.netlify.app/index-zh-CN.html" hreflang="zh-CN" rel="alternate"/>
+  <link href="https://artea.netlify.app/index-zh-TW.html" hreflang="zh-TW" rel="alternate"/>
+  <script type="application/ld+json">
+   {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "ARTEAK 非洲艺术收藏",
+  "description": "真实非洲艺术品展厅，包括诺克陶器、阿克汉青铜器和沃顿仪式工艺品",
+  "url": "https://artea.netlify.app",
+  "image": [
+    "https://res.cloudinary.com/dc0pgvkii/image/upload/large-man-bust-2_ot6ztc.jpg",
+    "https://res.cloudinary.com/dc0pgvkii/image/upload/v1745027123/sun-akhan-weight-ivory-coast-2_j7ti9q.jpg",
+    "https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-2_vobhbg.jpg"
+  ],
+  "mainEntity": [
+    {
+      "@type": "Collection",
+      "name": "Nok Terracottas",
+      "description": "尼日利亚诺克文化（公元前 500 年至公元 200 年）的古代陶俑雕塑",
+      "url": "https://artea.netlify.app/nok-terracottas.html"
+    },
+    {
+      "@type": "Collection",
+      "name": "非洲青铜器",
+      "description": "西非礼仪用青铜器，包括阿克汉砝码和勺子（17-20 世纪）",
+      "url": "https://artea.netlify.app/african-bronzes.html"
+    },
+    {
+      "@type": "Collection",
+      "name": "礼器",
+      "description": "贝宁/多哥地区的沃顿神像和精神物品（20 世纪）",
+      "url": "https://artea.netlify.app/traditional-artifacts.html"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "ARTEAK 画廊",
+    "url": "https://artea.netlify.app"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://artea.netlify.app"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+   {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "https://artea.netlify.app"
+    }
+  ]
+}
+  </script>
+ </head>
+ <body>
+  <header>
+   <h1>
+    <a href="index-zh.html">
+     ARTEAK
+    </a>
+   </h1>
+   <div class="header-controls">
+    <!-- Top row: Theme toggle + Hamburger menu -->
+    <div class="top-row">
+     <div class="theme-toggle-wrapper">
+      <span class="theme-label">
+       暗色 | 亮色
+      </span>
+      <button aria-label="切换暗/亮模式" class="theme-toggle" id="theme-toggle">
+       🌓
+      </button>
+     </div>
+     <div aria-label="Menu" class="hamburger-menu" onclick="toggleMenu()">
+      ☰
+     </div>
+    </div>
+    <!-- Bottom row: Language switcher -->
+    <div class="language-switcher">
+     <a aria-label="English version" href="index.html">
+      EN
+     </a>
+     <span class="lang-separator">
+      |
+     </span>
+     <a aria-label="Version française" href="index-fr.html">
+      FR
+     </a>
+     <span class="lang-separator">
+      |
+     </span>
+     <a aria-label="Versión en español" href="index-es.html">
+      ES
+     </a>
+     <span class="lang-separator">
+      |
+     </span>
+     <a aria-label="简体中文版本" class="active" href="index-zh.html">
+      ZH
+     </a>
+    </div>
+   </div>
+  </header>
+  <div class="breadcrumb">
+   <a class="active" href="index-zh.html">
+    首页
+   </a>
+  </div>
+  <!-- Updated Flyout Menu -->
+  <nav class="hidden" id="flyout-menu">
+   <div class="menu-close-btn" onclick="toggleMenu()">
+    ×
+   </div>
+   <ul>
+    <li>
+     <a href="index-zh.html">
+      首页
+     </a>
+    </li>
+    <li>
+     <a class="active" href="nok-terracottas-zh.html">
+      Nok Terracottas
+     </a>
+     <ul class="submenu">
+      <li>
+       <a href="large-man-bust-zh.html">
+        大型男性雕像
+       </a>
+      </li>
+      <li>
+       <a href="short-man-bust-zh.html">
+        矮小男性雕像
+       </a>
+      </li>
+      <li>
+       <a href="man-head-zh.html">
+        男子头像
+       </a>
+      </li>
+      <li>
+       <a href="nok-terracottas-zh.html#about-nok">
+        关于诺克
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <a href="african-bronzes-zh.html">
+      非洲青铜器
+     </a>
+     <ul class="submenu">
+      <li>
+       <a href="akhan-spoon-zh.html">
+        勺子
+       </a>
+      </li>
+      <li>
+       <a href="sun-akhan-weight-zh.html">
+        太阳
+       </a>
+      </li>
+      <li>
+       <a href="twins-akhan-weight-zh.html">
+        双胞胎
+       </a>
+      </li>
+      <li>
+       <a href="snake-akhan-weight-zh.html">
+        蛇
+       </a>
+      </li>
+      <li>
+       <a href="african-bronzes-zh.html#about-bronzes">
+        关于青铜器
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <a href="traditional-artifacts-zh.html">
+      礼器
+     </a>
+     <ul class="submenu">
+      <li>
+       <a href="bocio-fetiche-zh.html">
+        Bōcio/Fetiche
+       </a>
+      </li>
+      <li>
+       <a href="traditional-artifacts-zh.html#about-artifacts">
+        关于艺术品
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <a href="index-zh.html#about">
+      关于 ARTEAK
+     </a>
+    </li>
+    <li>
+     <a href="index-zh.html#contact">
+      联系
+     </a>
+    </li>
+   </ul>
+  </nav>
+  <main>
+   <!-- Nok Terracottas Section -->
+   <section class="carousel-container" id="nok-section">
+    <h2>
+     <a href="nok-terracottas-zh.html">
+      Nok Terracottas
+     </a>
+    </h2>
+    <div class="carousel">
+     <button aria-label="上一张图片" onclick="updateCarousel('nok', 'prev')" tabindex="0">
+      <span class="sr-only">
+       上一页
+      </span>
+     </button>
+     <div class="carousel-images" data-index="0" id="items-nok">
+      <img alt="美丽的诺克陶俑头像" height="600" loading="lazy" sizes="(max-width: 768px) 90vw, 50vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-3_vtbj8q.jpg?w=800&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-3_vtbj8q.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-3_vtbj8q.jpg?w=800&amp;f_auto,q_auto,dpr_auto 800w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-3_vtbj8q.jpg?w=1200&amp;f_auto,q_auto,dpr_auto 1200w
+    " style="aspect-ratio: 4/3" width="800"/>
+      <img alt="带手和胡须的诺克半身陶俑" height="600" loading="lazy" sizes="(max-width: 768px) 90vw, 50vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/large-man-bust-2_ot6ztc.jpg?w=800&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/large-man-bust-2_ot6ztc.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/large-man-bust-2_ot6ztc.jpg?w=800&amp;f_auto,q_auto,dpr_auto 800w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/large-man-bust-2_ot6ztc.jpg?w=1200&amp;f_auto,q_auto,dpr_auto 1200w
+    " style="aspect-ratio: 4/3" width="800"/>
+      <img alt="2009 年热释光证书" height="600" loading="lazy" sizes="(max-width: 768px) 90vw, 50vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-thermoluminescence-certificate_vfppn9.jpg?w=800&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-thermoluminescence-certificate_vfppn9.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-thermoluminescence-certificate_vfppn9.jpg?w=800&amp;f_auto,q_auto,dpr_auto 800w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-thermoluminescence-certificate_vfppn9.jpg?w=1200&amp;f_auto,q_auto,dpr_auto 1200w
+    " style="aspect-ratio: 4/3" width="800"/>
+      <img alt="诺克陶俑半身像" height="600" loading="lazy" sizes="(max-width: 768px) 90vw, 50vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/short-man-bust-1_tcjwom.jpg?w=800&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/short-man-bust-1_tcjwom.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/short-man-bust-1_tcjwom.jpg?w=800&amp;f_auto,q_auto,dpr_auto 800w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/short-man-bust-1_tcjwom.jpg?w=1200&amp;f_auto,q_auto,dpr_auto 1200w
+    " style="aspect-ratio: 4/3" width="800"/>
+      <img alt="宏伟的诺克半身陶俑" height="600" loading="lazy" sizes="(max-width: 768px) 90vw, 50vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/large-man-bust-4_xbm3sy.jpg?w=800&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/large-man-bust-4_xbm3sy.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/large-man-bust-4_xbm3sy.jpg?w=800&amp;f_auto,q_auto,dpr_auto 800w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/large-man-bust-4_xbm3sy.jpg?w=1200&amp;f_auto,q_auto,dpr_auto 1200w
+    " style="aspect-ratio: 4/3" width="800"/>
+      <img alt="带帽的神奇诺克半身陶俑" height="600" loading="lazy" sizes="(max-width: 768px) 90vw, 50vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/short-man-bust-3_r0ooec.jpg?w=800&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/short-man-bust-3_r0ooec.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/short-man-bust-3_r0ooec.jpg?w=800&amp;f_auto,q_auto,dpr_auto 800w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/short-man-bust-3_r0ooec.jpg?w=1200&amp;f_auto,q_auto,dpr_auto 1200w
+    " style="aspect-ratio: 4/3" width="800"/>
+      <img alt="带胡须的诺克陶俑头像" height="600" loading="lazy" sizes="(max-width: 768px) 90vw, 50vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-7_zpfgqs.jpg?w=800&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-7_zpfgqs.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-7_zpfgqs.jpg?w=800&amp;f_auto,q_auto,dpr_auto 800w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-7_zpfgqs.jpg?w=1200&amp;f_auto,q_auto,dpr_auto 1200w
+    " style="aspect-ratio: 4/3" width="800"/>
+     </div>
+     <button aria-label="下一张图片" onclick="updateCarousel('nok', 'next')" tabindex="0">
+      <span class="sr-only">
+       下一步
+      </span>
+     </button>
+    </div>
+    <div class="carousel-thumbnails" id="thumbs-nok">
+     <img alt="拇指 1" class="active-thumb" onclick="goToSlide('nok', 0)" sizes="(max-width: 600px) 30vw, (max-width: 1200px) 15vw, 10vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-3_vtbj8q.jpg?w=200&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-3_vtbj8q.jpg?w=100&amp;f_auto,q_auto,dpr_auto 100w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-3_vtbj8q.jpg?w=200&amp;f_auto,q_auto,dpr_auto 200w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-3_vtbj8q.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w
+  "/>
+     <img alt="拇指 2" onclick="goToSlide('nok', 1)" sizes="(max-width: 600px) 30vw, (max-width: 1200px) 15vw, 10vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/large-man-bust-2_ot6ztc.jpg?w=200&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/large-man-bust-2_ot6ztc.jpg?w=100&amp;f_auto,q_auto,dpr_auto 100w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/large-man-bust-2_ot6ztc.jpg?w=200&amp;f_auto,q_auto,dpr_auto 200w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/large-man-bust-2_ot6ztc.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w
+  "/>
+     <img alt="拇指 3" onclick="goToSlide('nok', 2)" sizes="(max-width: 600px) 30vw, (max-width: 1200px) 15vw, 10vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-thermoluminescence-certificate_vfppn9.jpg?w=200&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-thermoluminescence-certificate_vfppn9.jpg?w=100&amp;f_auto,q_auto,dpr_auto 100w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-thermoluminescence-certificate_vfppn9.jpg?w=200&amp;f_auto,q_auto,dpr_auto 200w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-thermoluminescence-certificate_vfppn9.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w
+  "/>
+     <img alt="拇指 4" onclick="goToSlide('nok', 3)" sizes="(max-width: 600px) 30vw, (max-width: 1200px) 15vw, 10vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/short-man-bust-1_tcjwom.jpg?w=200&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/short-man-bust-1_tcjwom.jpg?w=100&amp;f_auto,q_auto,dpr_auto 100w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/short-man-bust-1_tcjwom.jpg?w=200&amp;f_auto,q_auto,dpr_auto 200w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/short-man-bust-1_tcjwom.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w
+  "/>
+     <img alt="拇指 5" onclick="goToSlide('nok', 4)" sizes="(max-width: 600px) 30vw, (max-width: 1200px) 15vw, 10vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/large-man-bust-4_xbm3sy.jpg?w=200&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/large-man-bust-4_xbm3sy.jpg?w=100&amp;f_auto,q_auto,dpr_auto 100w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/large-man-bust-4_xbm3sy.jpg?w=200&amp;f_auto,q_auto,dpr_auto 200w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/large-man-bust-4_xbm3sy.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w
+  "/>
+     <img alt="拇指 6" onclick="goToSlide('nok', 5)" sizes="(max-width: 600px) 30vw, (max-width: 1200px) 15vw, 10vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/short-man-bust-3_r0ooec.jpg?w=200&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/short-man-bust-3_r0ooec.jpg?w=100&amp;f_auto,q_auto,dpr_auto 100w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/short-man-bust-3_r0ooec.jpg?w=200&amp;f_auto,q_auto,dpr_auto 200w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/short-man-bust-3_r0ooec.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w
+  "/>
+     <img alt="拇指 7" class="active-thumb" onclick="goToSlide('nok', 6)" sizes="(max-width: 600px) 30vw, (max-width: 1200px) 15vw, 10vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-7_zpfgqs.jpg?w=200&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-7_zpfgqs.jpg?w=100&amp;f_auto,q_auto,dpr_auto 100w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-7_zpfgqs.jpg?w=200&amp;f_auto,q_auto,dpr_auto 200w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/man-head-7_zpfgqs.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w
+  "/>
+    </div>
+    <p class="category-description">
+     约公元前 1500 年至公元前 500 年期间，诺克陶器以其大胆的特征和富有表现力的形式，展示了非洲早期艺术对粘土的卓越掌控。 它们精致的对称和复杂的细节体现了一种复杂的雕塑传统。 每一个人物都是技术技能和艺术眼光的见证。
+     <a class="accent-link" href="nok-terracottas-zh.html">
+      +explore
+     </a>
+    </p>
+   </section>
+   <!-- African Bronzes Section -->
+   <section class="carousel-container" id="bronzes-section">
+    <h2>
+     <a href="african-bronzes-zh.html">
+      非洲青铜器
+     </a>
+    </h2>
+    <div class="carousel">
+     <button aria-label="上一张图片" onclick="updateCarousel('bronzes', 'prev')" tabindex="0">
+      ←
+     </button>
+     <div class="carousel-images" data-index="0" id="items-bronzes">
+      <img <img="" alt="蛇形太阳光芒的阿坎青铜" height="600" loading="lazy" sizes="(max-width: 768px) 90vw, 50vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/v1745027123/sun-akhan-weight-ivory-coast-2_j7ti9q.jpg?w=800&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/v1745027123/sun-akhan-weight-ivory-coast-2_j7ti9q.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/v1745027123/sun-akhan-weight-ivory-coast-2_j7ti9q.jpg?w=800&amp;f_auto,q_auto,dpr_auto 800w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/v1745027123/sun-akhan-weight-ivory-coast-2_j7ti9q.jpg?w=1200&amp;f_auto,q_auto,dpr_auto 1200w
+    " style="aspect-ratio: 4/3" width="800"/>
+      <img alt="蛇形阿坎青铜器" height="600" loading="lazy" sizes="(max-width: 768px) 90vw, 50vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/snake-akhan-weight-3_zkvbky.jpg?w=800&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/snake-akhan-weight-3_zkvbky.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/snake-akhan-weight-3_zkvbky.jpg?w=800&amp;f_auto,q_auto,dpr_auto 800w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/snake-akhan-weight-3_zkvbky.jpg?w=1200&amp;f_auto,q_auto,dpr_auto 1200w
+    " style="aspect-ratio: 4/3" width="800"/>
+      <img alt="精美的阿坎青铜勺" height="600" loading="lazy" sizes="(max-width: 768px) 90vw, 50vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/akhan-spoon-4_ynnkkl.jpg?w=800&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/akhan-spoon-4_ynnkkl.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/akhan-spoon-4_ynnkkl.jpg?w=800&amp;f_auto,q_auto,dpr_auto 800w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/akhan-spoon-4_ynnkkl.jpg?w=1200&amp;f_auto,q_auto,dpr_auto 1200w
+    " style="aspect-ratio: 4/3" width="800"/>
+      <img alt="精美的阿坎砝码，具有极好的古铜色" height="600" loading="lazy" sizes="(max-width: 768px) 90vw, 50vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/twins-akhan-weight-1_zwydtt.jpg?w=800&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/twins-akhan-weight-1_zwydtt.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/twins-akhan-weight-1_zwydtt.jpg?w=800&amp;f_auto,q_auto,dpr_auto 800w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/twins-akhan-weight-1_zwydtt.jpg?w=1200&amp;f_auto,q_auto,dpr_auto 1200w
+    " style="aspect-ratio: 4/3" width="800"/>
+      <img alt="真实性证书范例" height="600" loading="lazy" sizes="(max-width: 768px) 90vw, 50vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/sun-akhan-weight-ivory-coast-certificate_hvxvao.jpg?w=800&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/sun-akhan-weight-ivory-coast-certificate_hvxvao.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/sun-akhan-weight-ivory-coast-certificate_hvxvao.jpg?w=800&amp;f_auto,q_auto,dpr_auto 800w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/sun-akhan-weight-ivory-coast-certificate_hvxvao.jpg?w=1200&amp;f_auto,q_auto,dpr_auto 1200w
+    " style="aspect-ratio: 4/3" width="800"/>
+     </div>
+     <button aria-label="下一张图片" onclick="updateCarousel('bronzes', 'next')" tabindex="0">
+      →
+     </button>
+    </div>
+    <div class="carousel-thumbnails" id="thumbs-bronzes">
+     <img alt="拇指 1" class="active-thumb" onclick="goToSlide('bronzes', 0)" sizes="(max-width: 600px) 30vw, (max-width: 1200px) 15vw, 10vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/v1745027123/sun-akhan-weight-ivory-coast-2_j7ti9q.jpg?w=200&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/v1745027123/sun-akhan-weight-ivory-coast-2_j7ti9q.jpg?w=100&amp;f_auto,q_auto,dpr_auto 100w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/v1745027123/sun-akhan-weight-ivory-coast-2_j7ti9q.jpg?w=200&amp;f_auto,q_auto,dpr_auto 200w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/v1745027123/sun-akhan-weight-ivory-coast-2_j7ti9q.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w
+  "/>
+     <img alt="拇指 2" onclick="goToSlide('bronzes', 1)" sizes="(max-width: 600px) 30vw, (max-width: 1200px) 15vw, 10vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/snake-akhan-weight-3_zkvbky.jpg?w=200&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/snake-akhan-weight-3_zkvbky.jpg?w=100&amp;f_auto,q_auto,dpr_auto 100w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/snake-akhan-weight-3_zkvbky.jpg?w=200&amp;f_auto,q_auto,dpr_auto 200w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/snake-akhan-weight-3_zkvbky.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w
+  "/>
+     <img alt="拇指 3" onclick="goToSlide('bronzes', 2)" sizes="(max-width: 600px) 30vw, (max-width: 1200px) 15vw, 10vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/akhan-spoon-4_ynnkkl.jpg?w=200&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/akhan-spoon-4_ynnkkl.jpg?w=100&amp;f_auto,q_auto,dpr_auto 100w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/akhan-spoon-4_ynnkkl.jpg?w=200&amp;f_auto,q_auto,dpr_auto 200w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/akhan-spoon-4_ynnkkl.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w
+  "/>
+     <img alt="拇指 4" onclick="goToSlide('bronzes', 3)" sizes="(max-width: 600px) 30vw, (max-width: 1200px) 15vw, 10vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/twins-akhan-weight-1_zwydtt.jpg?w=200&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/twins-akhan-weight-1_zwydtt.jpg?w=100&amp;f_auto,q_auto,dpr_auto 100w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/twins-akhan-weight-1_zwydtt.jpg?w=200&amp;f_auto,q_auto,dpr_auto 200w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/twins-akhan-weight-1_zwydtt.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w
+  "/>
+     <img alt="拇指 5" onclick="goToSlide('bronzes', 4)" sizes="(max-width: 600px) 30vw, (max-width: 1200px) 15vw, 10vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/sun-akhan-weight-ivory-coast-certificate_hvxvao.jpg?w=200&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/sun-akhan-weight-ivory-coast-certificate_hvxvao.jpg?w=100&amp;f_auto,q_auto,dpr_auto 100w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/sun-akhan-weight-ivory-coast-certificate_hvxvao.jpg?w=200&amp;f_auto,q_auto,dpr_auto 200w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/sun-akhan-weight-ivory-coast-certificate_hvxvao.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w
+  "/>
+    </div>
+    <p class="category-description">
+     19-20 世纪西非大师级青铜铸件。 除了度量黄金的功能外，这些阿坎砝码还体现了深厚的艺术性，是实用与美学的完美结合。 通过其复杂的形式，它们保留了手工艺、象征意义和日常生活紧密结合的文化传统。
+     <a class="accent-link" href="african-bronzes-zh.html">
+      +explore
+     </a>
+    </p>
+   </section>
+   <!-- Traditional Artifacts Section -->
+   <section class="carousel-container" id="fetishes-section">
+    <h2>
+     <a href="traditional-artifacts-zh.html">
+      礼器
+     </a>
+    </h2>
+    <div class="carousel">
+     <button aria-label="上一张图片" onclick="updateCarousel('fetishes', 'prev')" tabindex="0">
+      ←
+     </button>
+     <div class="carousel-images" data-index="0" id="items-fetishes">
+      <img alt="Beutiful Fetiche" height="600" loading="lazy" sizes="(max-width: 768px) 90vw, 50vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-1_vkzh5j.jpg?w=800&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-1_vkzh5j.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-1_vkzh5j.jpg?w=800&amp;f_auto,q_auto,dpr_auto 800w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-1_vkzh5j.jpg?w=1200&amp;f_auto,q_auto,dpr_auto 1200w
+    " style="aspect-ratio: 4/3" width="800"/>
+      <img alt="经过岁月的洗礼，Fetiche 的外观熠熠生辉" height="600" loading="lazy" sizes="(max-width: 768px) 90vw, 50vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-2_vobhbg.jpg?w=800&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-2_vobhbg.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-2_vobhbg.jpg?w=800&amp;f_auto,q_auto,dpr_auto 800w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-2_vobhbg.jpg?w=1200&amp;f_auto,q_auto,dpr_auto 1200w
+    " style="aspect-ratio: 4/3" width="800"/>
+      <img alt="Beutiful Fetiche" height="600" loading="lazy" sizes="(max-width: 768px) 90vw, 50vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-3_tgwbpv.jpg?w=800&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-3_tgwbpv.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-3_tgwbpv.jpg?w=800&amp;f_auto,q_auto,dpr_auto 800w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-3_tgwbpv.jpg?w=1200&amp;f_auto,q_auto,dpr_auto 1200w
+    " style="aspect-ratio: 4/3" width="800"/>
+     </div>
+     <button aria-label="下一张图片" onclick="updateCarousel('fetishes', 'next')" tabindex="0">
+      →
+     </button>
+    </div>
+    <div class="carousel-thumbnails" id="thumbs-fetishes">
+     <img alt="拇指 1" class="active-thumb" onclick="goToSlide('fetishes', 0)" sizes="(max-width: 600px) 30vw, (max-width: 1200px) 15vw, 10vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-1_vkzh5j.jpg?w=200&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-1_vkzh5j.jpg?w=100&amp;f_auto,q_auto,dpr_auto 100w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-1_vkzh5j.jpg?w=200&amp;f_auto,q_auto,dpr_auto 200w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-1_vkzh5j.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w
+  "/>
+     <img alt="拇指 2" onclick="goToSlide('fetishes', 1)" sizes="(max-width: 600px) 30vw, (max-width: 1200px) 15vw, 10vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-2_vobhbg.jpg?w=200&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-2_vobhbg.jpg?w=100&amp;f_auto,q_auto,dpr_auto 100w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-2_vobhbg.jpg?w=200&amp;f_auto,q_auto,dpr_auto 200w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-2_vobhbg.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w
+  "/>
+     <img alt="拇指 3" onclick="goToSlide('fetishes', 2)" sizes="(max-width: 600px) 30vw, (max-width: 1200px) 15vw, 10vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-3_tgwbpv.jpg?w=200&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-3_tgwbpv.jpg?w=100&amp;f_auto,q_auto,dpr_auto 100w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-3_tgwbpv.jpg?w=200&amp;f_auto,q_auto,dpr_auto 200w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-3_tgwbpv.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w
+  "/>
+    </div>
+    <p class="category-description">
+     这些仪式物品植根于仪式和信仰，反映了人类与看不见的事物建立联系的共同动力。 无论是雕刻、铸造还是组装，它们的形式都能传递超越物质的力量--沟通世界、引导仪式或守护神圣。 每件作品都蕴含着虔诚、神秘、象征和仪式的永恒力量，以及精湛工艺本身的静谧力量。
+     <a class="accent-link" href="traditional-artifacts-zh.html">
+      +explore
+     </a>
+    </p>
+   </section>
+   <!-- About Section -->
+   <section class="content-section" id="about">
+    <h2>
+     关于 ARTEAK
+    </h2>
+    <p>
+     我是一名业余收藏家，对部落和原始艺术、考古学以及它们所体现的历史有着与日俱增的热情。 每件作品都为我提供了一个新的学习机会--了解塑造它的文化、技术和传统--我怀着谦逊和好奇的态度踏上这段旅程。 我在巴黎和安道尔两地工作，我的化学背景影响了我观察和欣赏这些作品的方式——从复杂的技术到岁月、腐蚀和时间流逝带来的变化。 通过这次收藏，我不仅希望收集物品，还希望加深对它们所代表的文化和工艺的了解。
+    </p>
+   </section>
+   <div class="subsection">
+    <h4>
+     咨询与机会
+    </h4>
+    <p>
+     本网站作为一个空间，展示我仍然不多的收藏，分享我对这些艺术形式的热情，随着时间的推移丰富收藏，并建立有意义的联系。 我们热忱欢迎各方表达兴趣，就收购、交换或其他形式的参与提出询问。
+    </p>
+   </div>
+  </main>
+  <!-- Contact Footer -->
+  <footer id="contact">
+   <h2>
+    联系
+   </h2>
+   <div class="social-container">
+    <a aria-label="访问 Instagram" class="social-icon" href="https://www.instagram.com/yourusername/" rel="noopener noreferrer" target="_blank">
+     <i class="fab fa-instagram">
+     </i>
+    </a>
+    <a aria-label="Email" class="social-icon" href="mailto:your@email.com" rel="noopener noreferrer" target="_blank">
+     <i class="fas fa-envelope">
+     </i>
+    </a>
+   </div>
+   <p class="copyright">
+    © 2025 ARTEAK Collection. 保留所有权利。
+   </p>
+   <a href="#top">
+    ↑ 返回页首
+   </a>
+  </footer>
+  <script src="script.js">
+  </script>
+  <script src="theme-toggle.js">
+  </script>
+ </body>
+</html>

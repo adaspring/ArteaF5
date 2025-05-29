@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="zh">
+ <head>
+  <!-- Google tag (gtag.js) -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-S8Z64W5M39">
+  </script>
+  <script>
+   window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-S8Z64W5M39');
+  </script>
+  <!-- meta equal for each html page -->
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <!-- meta most important different each page -->
+  <meta content="ARTEAK - 真实的非洲仪式工艺品，包括来自法国私人收藏的 Bōcio/Fetiche 权力雕像。" name="description"/>
+  <meta content="非洲仪式工艺品、Bōcio、Fetiche、伏登艺术、权力人物、仪式物品、精神工艺品" name="keywords"/>
+  <meta content="ARTEAK - 非洲传统仪式工艺品 | Bōcio/Fetiche" property="og:title"/>
+  <title>
+   ARTEAK - 传统仪式工艺品 | Bōcio/Fetiche
+  </title>
+  <meta content="https://artea.netlify.app/traditional-artifacts.html" property="og:url"/>
+  <!-- meta different for each html page -->
+  <meta content="ARTEAK 画廊" name="author"/>
+  <meta content="探索伏都修行中使用的 Bōcio/Fetiche 神像，材料包括木头、铁和有机物。" property="og:description"/>
+  <meta content="website" property="og:type"/>
+  <meta content="https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-1_vkzh5j.jpg" property="og:image"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <!-- equal in each html page -->
+  <link href="https://artea.netlify.app/traditional-artifacts.html" rel="canonical"/>
+  <link href="styles.css" rel="stylesheet"/>
+  <link href="dark-theme.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://artea.netlify.app/traditional-artifacts.html" hreflang="en" rel="alternate"/>
+  <link href="https://artea.netlify.app/traditional-artifacts-fr.html" hreflang="fr" rel="alternate"/>
+  <script type="application/ld+json">
+   {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "传统礼器 - ARTEAK",
+  "description": "法国私人收藏的伏都教仪式中使用的 Bōcio/Fetiche 神像真品",
+  "url": "https://artea.netlify.app/traditional-artifacts.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "ARTEAK - 非洲艺术画廊",
+    "url": "https://artea.netlify.app"
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "非洲仪式艺术"
+  },
+  "mainEntity": {
+    "@type": "VisualArtwork",
+    "name": "Bōcio/Fetiche 力量雕像",
+    "artform": "仪式雕塑",
+    "artMedium": "木材、铁、有机材料",
+    "dateCreated": "20th century",
+    "height": "28cm",
+    "image": "https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-1_vkzh5j.jpg",
+    "description": "蕴含仪式材料的沃顿神像，用于保护和精神干预",
+    "artworkSurface": "祭品留下的使用痕迹",
+    "creator": {
+      "@type": "Organization",
+      "name": "沃顿精神传统"
+    }
+  },
+  "hasPart": [
+    {
+      "@type": "CreativeWork",
+      "name": "关于有线 Bōcio",
+      "description": "有关伏顿权力人物的历史和精神背景"
+    },
+    {
+      "@type": "Book",
+      "name": "Vodun: 非洲巫毒",
+      "url": "https://www.fondationcartier.com/en/editions/vaudou",
+      "author": "Fondation Cartier"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+   {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "https://artea.netlify.app"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "礼器",
+      "item": "https://artea.netlify.app/traditional-artifacts.html"
+    }
+  ]
+}
+  </script>
+ </head>
+ <body>
+  <header>
+   <h1>
+    <a href="index-zh.html">
+     ARTEAK
+    </a>
+   </h1>
+   <div class="header-controls">
+    <!-- Top row: Theme toggle + Hamburger menu -->
+    <div class="top-row">
+     <div class="theme-toggle-wrapper">
+      <span class="theme-label">
+       暗 | 亮
+      </span>
+      <button aria-label="切换暗/亮模式" class="theme-toggle" id="theme-toggle">
+       🌓
+      </button>
+     </div>
+     <div aria-label="Menu" class="hamburger-menu" onclick="toggleMenu()">
+      ☰
+     </div>
+    </div>
+    <!-- Bottom row: Language switcher -->
+    <div class="language-switcher">
+     <a aria-label="English version" href="index.html">
+      EN
+     </a>
+     <span class="lang-separator">
+      |
+     </span>
+     <a aria-label="Version française" href="index-fr.html">
+      FR
+     </a>
+     <span class="lang-separator">
+      |
+     </span>
+     <a aria-label="Versión en español" href="index-es.html">
+      ES
+     </a>
+     <span class="lang-separator">
+      |
+     </span>
+     <a aria-label="简体中文版本" class="active" href="index-zh.html">
+      ZH
+     </a>
+    </div>
+   </div>
+  </header>
+  <div class="breadcrumb">
+   <a href="index-zh.html">
+    首页
+   </a>
+   &gt;
+   <span>
+    礼器
+   </span>
+  </div>
+  <!-- Updated Flyout Menu -->
+  <nav class="hidden" id="flyout-menu">
+   <div class="menu-close-btn" onclick="toggleMenu()">
+    ×
+   </div>
+   <ul>
+    <li>
+     <a href="index-zh.html">
+      首页
+     </a>
+    </li>
+    <li>
+     <a class="active" href="nok-terracottas-zh.html">
+      Nok 陶俑
+     </a>
+     <ul class="submenu">
+      <li>
+       <a href="large-man-bust-zh.html">
+        大型男性雕像
+       </a>
+      </li>
+      <li>
+       <a href="short-man-bust-zh.html">
+        矮小男性雕像
+       </a>
+      </li>
+      <li>
+       <a href="man-head-zh.html">
+        人头雕像
+       </a>
+      </li>
+      <li>
+       <a href="nok-terracottas-zh.html#about-nok">
+        关于诺克
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <a href="african-bronzes-zh.html">
+      非洲青铜器
+     </a>
+     <ul class="submenu">
+      <li>
+       <a href="akhan-spoon-zh.html">
+        勺子
+       </a>
+      </li>
+      <li>
+       <a href="sun-akhan-weight-zh.html">
+        太阳
+       </a>
+      </li>
+      <li>
+       <a href="twins-akhan-weight-zh.html">
+        双胞胎
+       </a>
+      </li>
+      <li>
+       <a href="snake-akhan-weight-zh.html">
+        蛇
+       </a>
+      </li>
+      <li>
+       <a href="african-bronzes-zh.html#about-bronzes">
+        关于青铜器
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <a href="traditional-artifacts-zh.html">
+      礼器
+     </a>
+     <ul class="submenu">
+      <li>
+       <a href="bocio-fetiche-zh.html">
+        Bōcio/Fetiche
+       </a>
+      </li>
+      <li>
+       <a href="traditional-artifacts-zh.html#about-artifacts">
+        关于艺术品
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <a href="index-zh.html#about">
+      关于 ARTEAK
+     </a>
+    </li>
+    <li>
+     <a href="index-zh.html#contact">
+      联系
+     </a>
+    </li>
+   </ul>
+  </nav>
+  <main>
+   <section class="carousel-container" id="bocio">
+    <h2>
+     <a href="bocio-fetiche-zh.html">
+      Bōcio/Fetiche
+     </a>
+    </h2>
+    <div class="carousel">
+     <button aria-label="上一张图片" onclick="updateCarousel('bocio', 'prev')" tabindex="0">
+      ←
+     </button>
+     <div class="carousel-images" data-index="0" id="items-bocio">
+      <img alt="经过岁月的洗礼，Fetiche 的外观熠熠生辉" height="600" loading="lazy" sizes="(max-width: 768px) 90vw, 50vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-2_vobhbg.jpg?w=800&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-2_vobhbg.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-2_vobhbg.jpg?w=800&amp;f_auto,q_auto,dpr_auto 800w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-2_vobhbg.jpg?w=1200&amp;f_auto,q_auto,dpr_auto 1200w
+    " style="aspect-ratio: 4/3" width="800"/>
+      <img alt="Beautiful Fetiche" height="600" loading="lazy" sizes="(max-width: 768px) 90vw, 50vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-4_r1vj6x.jpg?w=800&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-4_r1vj6x.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-4_r1vj6x.jpg?w=800&amp;f_auto,q_auto,dpr_auto 800w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-4_r1vj6x.jpg?w=1200&amp;f_auto,q_auto,dpr_auto 1200w
+    " style="aspect-ratio: 4/3" width="800"/>
+      <img alt="蕴含仪式材料的功能强大的 fetiche" height="600" loading="lazy" sizes="(max-width: 768px) 90vw, 50vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-1_vkzh5j.jpg?w=800&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-1_vkzh5j.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-1_vkzh5j.jpg?w=800&amp;f_auto,q_auto,dpr_auto 800w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-1_vkzh5j.jpg?w=1200&amp;f_auto,q_auto,dpr_auto 1200w
+    " style="aspect-ratio: 4/3" width="800"/>
+     </div>
+     <button aria-label="下一张图片" onclick="updateCarousel('bocio', 'next')" tabindex="0">
+      →
+     </button>
+    </div>
+    <div class="carousel-thumbnails" id="thumbs-bocio">
+     <img alt="拇指 1" class="active-thumb" onclick="goToSlide('bocio', 0)" sizes="(max-width: 600px) 30vw, (max-width: 1200px) 15vw, 10vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-2_vobhbg.jpg?w=200&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-2_vobhbg.jpg?w=100&amp;f_auto,q_auto,dpr_auto 100w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-2_vobhbg.jpg?w=200&amp;f_auto,q_auto,dpr_auto 200w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-2_vobhbg.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w
+  "/>
+     <img alt="拇指 2" onclick="goToSlide('bocio', 1)" sizes="(max-width: 600px) 30vw, (max-width: 1200px) 15vw, 10vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-4_r1vj6x.jpg?w=200&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-4_r1vj6x.jpg?w=100&amp;f_auto,q_auto,dpr_auto 100w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-4_r1vj6x.jpg?w=200&amp;f_auto,q_auto,dpr_auto 200w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-4_r1vj6x.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w
+  "/>
+     <img alt="拇指 3" onclick="goToSlide('bocio', 2)" sizes="(max-width: 600px) 30vw, (max-width: 1200px) 15vw, 10vw" src="https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-1_vkzh5j.jpg?w=200&amp;f_auto,q_auto,dpr_auto" srcset="
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-1_vkzh5j.jpg?w=100&amp;f_auto,q_auto,dpr_auto 100w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-1_vkzh5j.jpg?w=200&amp;f_auto,q_auto,dpr_auto 200w,
+    https://res.cloudinary.com/dc0pgvkii/image/upload/Fetiche-1_vkzh5j.jpg?w=400&amp;f_auto,q_auto,dpr_auto 400w
+  "/>
+    </div>
+    <div class="category-description left-align-desc">
+     <p>
+      材料：木材、铁、有机物、塑料
+     </p>
+     <p>
+      高度：28厘米
+     </p>
+     <p>
+      出处：法国私人收藏
+     </p>
+     <p>
+      原产地：贝宁 Fon 人，20 世纪中期
+     </p>
+     <p>
+      <a class="accent-link" href="#corded-bocio">
+       +信息
+      </a>
+      <a class="accent-link" href="bocio-fetiche-zh.html">
+       + 图片
+      </a>
+     </p>
+    </div>
+   </section>
+   <section class="content-section" id="about-artifacts">
+    <h2>
+     关于艺术品
+    </h2>
+    <div class="subsection">
+     <h3 id="corded-bocio">
+      有线 Bōcio
+     </h3>
+     <p>
+      bōcio 上的绳索和铁钉让人联想到历史创伤和精神力量--它们曾是奴隶贸易时期奴役的象征，如今则是保护和仪式控制的标志。
+      <button aria-controls="content1" aria-expanded="false" class="read-more">
+       显示更多...
+      </button>
+     </p>
+     <div aria-hidden="true" class="hidden-content" id="content1">
+      <p>
+       铁钉刺穿人物，呼唤着伏都战争和金属之神古，在必要时进行防御和打击。 厚厚的深色铜锈是在反复祭祀中形成的，标志着它在伏都习俗中发挥着积极作用。 正是通过这种不断将物体结合在一起的过程，通过这种分层和转化，bōcio 不仅具有强大的精神力量，而且还是一件独一无二、不断发展的艺术品。
+      </p>
+     </div>
+    </div>
+    <div class="subsection">
+     <h3>
+      Bōcio：作为伏都艺术表现形式的权力人物
+     </h3>
+     <div class="sub-subsection">
+      <h4>
+       起源
+      </h4>
+      <p>
+       Bōcio 是代表亡者（chio）存在的力量形象（bo），用来抵御不幸、巫术和死亡。 每个 bōcio 的意思是“有力量的尸体”，它植根于伏都信仰，在伏都信仰中，无形的力量塑造着人的生命，并可以通过仪式加以引导。 面对个人和社会的威胁，这些人物充当了治疗、防御和伸张正义的工具。
+       <button aria-controls="content2" aria-expanded="false" class="read-more">
+        显示更多...
+       </button>
+      </p>
+      <div aria-hidden="true" class="hidden-content" id="content2">
+       <p>
+        它们不是象征性的，而是积极的存在。 在跨大西洋贩卖奴隶期间，几内亚湾有近 300 万人被掳走。 在这种情况下，伏都成为一种强大的复原和纪念手段。 今天，特别是在贝宁，它仍然是纪念这段历史和驾驭当代生活的核心。 如今，bōcio 仍在使用，并随着其服务的社区不断发展。 它们的意义不是固定不变的，而是有反应的。 因此，它们是信仰、保护和将精神力量转化为形式的力量的永恒表达。
+       </p>
+      </div>
+     </div>
+     <div class="sub-subsection">
+      <h4>
+       艺术与精神
+      </h4>
+      <p>
+       它们的形式是通过神圣的过程形成的--材料是根据其精神内涵选择的，并通过供品和手势激活。 它们引人注目、往往令人不安的外观反映了它们的双重功能：守护和攻击，遏制和释放。
+       <button aria-controls="content3" aria-expanded="false" class="read-more">
+        显示更多...
+       </button>
+      </p>
+      <div aria-hidden="true" class="hidden-content" id="content3">
+       <p>
+        制作 bōcio 本身就是一种仪式表演。 伏都教祭司根据每种材料的象征意义精心挑选，然后通过供品和咒语将其捆绑、刺穿并激活。 任何部分都不是单独的装饰，每一个附加部分都会说话。 其结果是一个行动和意图的形象--受命保护主人、吸引或排斥力量、惩罚不法行为或恢复平衡。 这些都不是静态的人工制品，而是活跃的存在，是由它们的使用以及与看不见的东西之间的互动形成的。 Bōcio 反映了一种艺术与精神密不可分的世界观，因为它们的形式本身就产生于神圣的劳动。 它们模棱两可的美感--既可怕又美丽，既原始又沉稳--反映了它们的双重角色：守护与攻击，庇护与对抗。 它们是深具情感的物品，意在挑衅、扰乱和增强力量。 虽然 bōcio 植根于殖民主义、暴力和反抗的历史现实，但它在当代伏顿习俗中继续发展和发挥作用。 它们的意义不是固定不变的，而是与时俱进的--就像它们所服务的社区一样。 因此，它们仍然是生存、转变和信仰的艺术力量得以显现的永恒象征。
+       </p>
+      </div>
+     </div>
+    </div>
+    <div class="subsection">
+     <h3>
+      资源
+     </h3>
+     <ul class="lecture-content">
+      <li>
+       <a href="https://www.chateau-vodou.com/le-musee/" rel="noopener" target="_blank">
+        Château Vodou 博物馆藏品
+       </a>
+      </li>
+      <li>
+       <a href="https://www.fondationcartier.com/en/editions/vaudou" rel="noopener" target="_blank">
+        Vodun: African Voodoo (Fondation Cartier)
+       </a>
+      </li>
+      <li>
+       <a href="https://digitalprojects.carlos.emory.edu/exhibits/show/power-figures-testing/bocio-intro/bocio-figures" rel="noopener" target="_blank">
+        博西欧人物：埃默里数字藏品
+       </a>
+      </li>
+      <li>
+       <a href="https://www.duendeartprojects.com/blog/686-discover-this-interesting-power-object-bocio/" rel="noopener" target="_blank">
+        力量之物：博西奥（Duende 艺术项目）
+       </a>
+      </li>
+      <li>
+       <a href="https://www.quaibranly.fr/fr/informations-pratiques/venir/mediatheque" rel="noopener" target="_blank">
+        Médiathèque du musée du quai Branly - Jacques Chirac
+       </a>
+      </li>
+      <li>
+       <a href="https://catalogue.bnf.fr/index.do" rel="noopener" target="_blank">
+        Bibliothèque nationale de France Catalogue
+       </a>
+      </li>
+     </ul>
+    </div>
+   </section>
+  </main>
+  <footer>
+   <a href="index-zh.html">
+    ← 返回主图库
+   </a>
+  </footer>
+  <script src="script.js">
+  </script>
+  <script src="theme-toggle.js">
+  </script>
+ </body>
+</html>
