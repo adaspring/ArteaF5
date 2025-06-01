@@ -295,14 +295,16 @@
             body {
                 font-size: 9pt;
                 padding: 10px;
-                padding-top: 0; /* Removes top padding that might push content down */
-    
-            }
+                padding-top: 0 !important; /* Removes top padding that might push content down */
+
+
     .header {
-        position: relative; /* Prevents header from being treated as a separate page */
-        height: auto; /* Allows content to flow naturally */
-        margin-bottom: 5px; /* Slightly reduces space after header */
+        display: block !important;   /* Forces standard block layout */
+        height: auto !important;     /* Prevents fixed height issues */
+        margin-bottom: 5px !important;  /* Reduces space after header */
+        page-break-after: avoid !important;  /* Keeps header with content */
     }
+
             .section {
                 margin-bottom: 15px;
             }
