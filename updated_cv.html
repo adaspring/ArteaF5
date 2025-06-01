@@ -6,7 +6,7 @@
     <title>CV - Gerard Montellieu Molip</title>
     <style>
         @page {
-            margin: 0.5in;
+            margin: 0.3in;
             size: A4;
         }
         
@@ -291,24 +291,44 @@
         }
         
         /* Print optimization */
-        @media print {
-            body {
-                font-size: 9pt;
-                padding: 10px;
-            }
-            
-            .section {
-                margin-bottom: 15px;
-            }
-            
-            .experience-item {
-                margin-bottom: 12px;
-            }
-            
-            .languages-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
+@media print {
+    body {
+        font-size: 9pt;
+        padding: 5px;
+    }
+    
+    .header {
+        margin-bottom: 10px;
+        padding-bottom: 8px;
+    }
+    
+    .header-right {
+        width: 80px;
+        height: 100px;
+    }
+    
+    .name {
+        font-size: 20pt;
+        margin-bottom: 3px;
+    }
+    
+    .contact {
+        font-size: 10pt;
+    }
+    
+    .section {
+        margin-bottom: 12px;
+    }
+    
+    .experience-item {
+        margin-bottom: 10px;
+        padding: 8px;
+    }
+    
+    .languages-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
     </style>
 </head>
 <body>
