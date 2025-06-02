@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Gerard Montellieu Molip</title>
+    <style>
+        @page {
+            margin: 0.5in;
+            size: A4;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            font-size: 10pt;
+            line-height: 1.3;
+            color: #2c3e50;
+            background: #fff;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 15px;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1.5px solid #2c3e50;
+        }
+        
+        .header-left {
+            text-align: center;
+            flex: 1;
+        }
+        
+        .header-right {
+            width: 120px;
+            height: 150px;
+            border: 2px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+        
+        .profile-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        
+        .name {
+            font-size: 24pt;
+            font-weight: 300;
+            color: #2c3e50;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+        
+        .contact {
+            font-size: 11pt;
+            color: #666;
+        }
+        
+        .section {
+            margin-bottom: 18px;
+        }
+        
+        .section-title {
+            font-size: 12pt;
+            color: #2c3e50;
+            font-weight: 700;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid #3498db;
+            padding-bottom: 2px;
+        }
+        
+        .experience-item {
+            margin-bottom: 20px;
+            padding: 12px;
+            background: #fafbfc;
+            border-radius: 4px;
+            border-left: 3px solid #3498db;
+            page-break-inside: avoid;
+        }
+        
+        .job-title {
+            font-size: 11pt;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 2px;
+        }
+        
+        .duration {
+            font-size: 9pt;
+            color: #666;
+            margin-bottom: 3px;
+        }
+        
+        .company {
+            font-size: 10pt;
+            color: #3498db;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+        
+        .location {
+            font-size: 9pt;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+        
+        .description {
+            font-size: 9.5pt;
+            color: #444;
+            margin-bottom: 5px;
+            text-align: justify;
+        }
+        
+        .responsibilities {
+            font-size: 9pt;
+            color: #444;
+            margin-bottom: 8px;
+        }
+        
+        .responsibilities strong {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        
+        .responsibilities ul {
+            list-style: none;
+            margin: 3px 0 0 8px;
+        }
+        
+        .responsibilities li {
+            margin-bottom: 2px;
+            position: relative;
+            padding-left: 8px;
+            text-align: justify;
+        }
+        
+        .responsibilities li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+        }
+        
+        .papers {
+            font-size: 9pt;
+            color: #444;
+        }
+        
+        .papers strong {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        
+        .papers ul {
+            list-style: none;
+            margin: 3px 0 0 8px;
+        }
+        
+        .papers li {
+            margin-bottom: 2px;
+            position: relative;
+            padding-left: 8px;
+            text-align: justify;
+        }
+        
+        .papers li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+        }
+        
+        .education-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+        }
+        
+        .education-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 6px 0;
+            border-bottom: 0.5px solid #ecf0f1;
+        }
+        
+        .education-item:last-child {
+            border-bottom: none;
+        }
+        
+        .education-left {
+            flex: 1;
+        }
+        
+        .degree {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 10pt;
+            margin-bottom: 2px;
+        }
+        
+        .institution {
+            color: #3498db;
+            font-size: 9pt;
+        }
+        
+        .year {
+            color: #666;
+            font-size: 9pt;
+            white-space: nowrap;
+            margin-left: 10px;
+        }
+        
+        .languages-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+        }
+        
+        .language-item {
+            text-align: center;
+            padding: 6px 8px;
+            background: #f8f9fa;
+            border-radius: 3px;
+            border-left: 2px solid #3498db;
+        }
+        
+        .language {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 9pt;
+            display: block;
+        }
+        
+        .level {
+            font-size: 8pt;
+            color: #666;
+            margin-top: 2px;
+        }
+        
+        .publications-list {
+            list-style: none;
+        }
+        
+        .publications-list li {
+            margin-bottom: 6px;
+            padding: 8px 10px;
+            background: #f8f9fa;
+            border-radius: 3px;
+            border-left: 3px solid #3498db;
+            font-size: 9pt;
+            text-align: justify;
+        }
+        
+        .awards-section {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 3px;
+            border-left: 3px solid #e74c3c;
+        }
+        
+        .award-item {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 10pt;
+        }
+        
+        .two-column {
+            display: block;
+        }
+        
+        .compact-section {
+            margin-bottom: 12px;
+        }
+        
+        /* Print optimization */
+        @media print {
+            body {
+                font-size: 9pt;
+                padding: 10px;
+            }
+            
+            .section {
+                margin-bottom: 15px;
+            }
+            
+            .experience-item {
+                margin-bottom: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-left">
+            <h1 class="name">Gerard Montellieu Molip</h1>
+            <div class="contact">Tel: 073937373 | Email: hddhdh@shhd.com</div>
+        </div>
+        <div class="header-right">
+            <img src="path/to/your/photo.jpg" alt="Gerard Montellieu Molip" class="profile-photo">
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Experience</h2>
+        
+        <div class="experience-item">
+            <div class="job-title">Research Support technician (Ingénieur d'études)</div>
+            <div class="duration">April 2022 - October 2023 (1y 7m)</div>
+            <div class="company">Faculté des Sciences - Université Paris Cité | Laboratory of Molecular Electrochemistry (LEM)</div>
+            <div class="location">Greater Paris Metropolitan Region</div>
+            <div class="description">
+                I was involved in a research on electrochromic windows with integrated energy storage capabilities as part of a CNRS prematurity project, resulting in a patent submission and one publication.
+            </div>
+            <div class="responsibilities">
+                <strong>Key responsibilities:</strong><br>
+                <li>Optimize and define protocols for reversible electrodeposition of zinc and manganese oxide thin films on Zn and transparent electrodes (FTO, ITO, and custom nanostructured ITO) in order to develop dual-function devices combining modulation of optical properties with electrical energy storage mechanisms!
+                </li>
+            </div>
+            <div class="papers">
+                <strong>Papers:</strong>
+                <ul>
+                    <li>Add your papers here</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="experience-item">
+            <div class="job-title">Research Support Technician</div>
+            <div class="duration">July 2020 - January 2022 (1y 7m)</div>
+            <div class="company">Institut Català de Nanociència i Nanotecnologia (ICN2) | NEO-Energy group</div>
+            <div class="location">Barcelona, Catalonia, Spain</div>
+            <div class="description">
+                I contributed to the GraphCat community project "Autograph" focused on developing high-energy density graphene-based supercapacitors for low-consumption electronics through advanced materials engineering and electrode/cell optimization. This collaborative project, between IREC, EURECAT and ICN2, also gave me the opportunity to engage in fruitful discussions with researchers from other institutions, particularly with Dr. Hamesh Avireddy, which enriched the research.
+            </div>
+            <div class="responsibilities">
+                <strong>Key Responsibilities:</strong><br>
+            <li>Develop and continuously optimize protocols for Pouch Cell construction. Execute complete cell assembly processes (Coin Cell and Pouch Cell configurations, single and multilayer) for supercapacitors and Li-ion capacitors. Prepare electrode slurries and coatings with precise compositional control.<br><br>
+                </li></div>
+            <div class="papers">
+                <strong>Papers:</strong>
+                <ul>
+                    <li>Add your papers here</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="experience-item">
+            <div class="job-title">Delivery Driver</div>
+            <div class="duration">August 2018 – February 2020 (1y 7m)</div>
+            <div class="location">Andorra</div>
+            <div class="responsibilities">
+                <strong>Key responsibilities:</strong> 
+                <li>Deliver a wide range of products, including documents, groceries, retail items, and restaurant food, ensuring timely and accurate service. Optimize routes and delivery schedules for maximum efficiency under time constraints. Solve logistical and customer-related issues effectively in real-time. Maintain a high level of customer service and professionalism.<br><br>
+                </li>
+                <em>I present this experience in this way, even if the responsibilities might sound too elaborate, to highlight my belief that every role deserves full commitment, professionalism, and respect. It also helped me develop practical skills in organization, customer relations, and quick-decision making.</em>
+            </div>
+        </div>
+
+        <div class="experience-item">
+            <div class="job-title">Junior Scientist</div>
+            <div class="duration">December 2017 - March 2018 (4m)</div>
+            <div class="company">CIDETEC | Electrochemistry Surface Area</div>
+            <div class="location">San Sebastián, Spain</div>
+            <div class="description">
+                I worked on industrial surface coating solutions for automotive applications, focusing on protective coatings for metallic ABS components with comprehensive validation for production deployment.
+            </div>
+            <div class="responsibilities">
+                <strong>Key Responsibilities:</strong>
+                    <li>Perform industrial-scale testing protocols and applied sol-gel coatings to automotive metallic ABS components using dip-coating techniques in 50L formulation bath.</li>
+                    
+            </div>
+
+        </div>
+
+        <div class="experience-item">
+            <div class="job-title">Internship</div>
+            <div class="duration">May 2017 - July 2017 (3m)</div>
+            <div class="company">University of Stuttgart | Department of Functional Polymers</div>
+            <div class="location">Stuttgart Area, Germany</div>
+            <div class="responsibilities">
+                <li>I performed electrochemical synthesis of conducting polymers and conducted characterization using cyclic voltammetry (C.V.), chronoamperometric methods, and UV/Vis/NIR-spectroelectrochemistry. Additionally, I deposited polymeric thin films through various techniques including spin coating, dip coating, and doctor blading, while operating as an experienced glovebox user for controlled atmosphere operations.</li>
+            </div>
+        </div>
+
+        <div class="experience-item">
+            <div class="job-title">Internship</div>
+            <div class="duration">November 2016 - February 2017 (4m)</div>
+            <div class="company">Universitat Autònoma de Barcelona | Laboratory of Molecular Electrochemistry</div>
+            <div class="location">Barcelona Area, Spain</div>
+            <div class="responsibilities">
+                <li>I conducted studies of molecular reaction mechanisms using cyclic voltammetry and performed electrosynthesis along with comprehensive electrochemical characterization of small organic molecules.</li>
+            </div>
+        </div>
+
+        <div class="experience-item">
+            <div class="job-title">Internship</div>
+            <div class="duration">March 2016 - June 2016 (4m)</div>
+            <div class="company">Universidad Politécnica de Cartagena | Centre of Electrochemistry and Intelligent Materials</div>
+            <div class="location">Cartagena Area, Spain</div>
+            <div class="responsibilities">
+                <li>I worked on electropolymerization of conducting polymers for subsequent use as biomimetic actuators. I performed comprehensive characterization of the synthesized materials using electrochemical techniques including cyclic voltammetry (C.V.) and chronoamperometric methods, as well as X-ray photoelectron spectroscopy (XPS).</li>
+            </div>
+            <div class="papers">
+                <strong>Papers:</strong>
+                <ul>
+                    <li>Add your papers here</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="two-column">
+        <div>
+            <div class="section compact-section">
+                <h2 class="section-title">Education</h2>
+                <div class="education-grid">
+                    <div class="education-item">
+                        <div class="education-left">
+                            <div class="degree">Master of Science - MS, Electrochemistry</div>
+                            <div class="institution">Universidad Politécnica de Cartagena</div>
+                        </div>
+                        <div class="year">2015 - 2016</div>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-left">
+                            <div class="degree">Bachelor of Science - BS, Chemistry</div>
+                            <div class="institution">Universitat Autònoma de Barcelona</div>
+                        </div>
+                        <div class="year">2007 - 2015</div>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-left">
+                            <div class="degree">Natural Sciences</div>
+                            <div class="institution">High School Sant Ermengol - Principallity of Andorra</div>
+                        </div>
+                        <div class="year">2005 - 2007</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section compact-section">
+                <h2 class="section-title">Honors-Awards</h2>
+                <div class="awards-section">
+                    <div class="award-item">Grant for Master studies</div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="section compact-section">
+                <h2 class="section-title">Languages</h2>
+                <div class="languages-grid">
+                    <div class="language-item">
+                        <span class="language">English</span>
+                        <span class="level">Professional Working</span>
+                    </div>
+                    <div class="language-item">
+                        <span class="language">Catalan</span>
+                        <span class="level">Native/Bilingual</span>
+                    </div>
+                    <div class="language-item">
+                        <span class="language">French</span>
+                        <span class="level">Elementary</span>
+                    </div>
+                    <div class="language-item">
+                        <span class="language">Spanish</span>
+                        <span class="level">Native/Bilingual</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Publications</h2>
+        <ul class="publications-list">
+            <li>Coherent Integration of Organic Gel Polymer Electrolyte and Ambipolar Polyoxometalate Hybrid Nanocomposite Electrode in a Compact High-Performance Supercapacitor</li>
+            <li>Rational design of MXene/activated carbon/polyoxometalate triple hybrid electrodes with enhanced capacitance for organic-electrolyte supercapacitors</li>
+            <li>Self-Supported Polypyrrole/Polyvinylsulfate Films: Electrochemical Synthesis, Characterization, and Sensing Properties of Their Redox Reactions.</li>
+        </ul>
+    </div>
+</body>
+</html>
