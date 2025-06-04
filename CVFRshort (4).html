@@ -86,8 +86,6 @@ body {
 .section {
   margin-bottom: 20px;    /* ensures each section sits 20px above the next */
   min-height: 60px;       /* prevents very short sections from collapsing */
-page-break-inside: avoid;
-  break-inside: avoid;
 }
 
 .section-title {
@@ -215,15 +213,13 @@ page-break-inside: avoid;
 
 /* ─────────────────────────────────────────────────────────
    Education Grid
-   ───────────────────────────────────────────────────────── */
+   ───────────────────────────────────────────────────────── */  
+    
 .education-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 8px;                /* space between each education item */
-page-break-inside: avoid;
-  break-inside: avoid;
-  -webkit-column-break-inside: avoid;
-  -moz-column-break-inside: avoid;
+
 }
 
 .education-item {
@@ -232,10 +228,7 @@ page-break-inside: avoid;
   align-items: center;
   padding: 6px 0;
   border-bottom: 0.5px solid #ecf0f1;
-  page-break-inside: avoid;
-  break-inside: avoid;
- -webkit-column-break-inside: avoid;  /* WebKit (Chrome/Safari) */
-  -moz-column-break-inside: avoid;     /* Firefox */
+       
 }
 .education-item:last-child {
   border-bottom: none;
@@ -351,10 +344,13 @@ page-break-inside: avoid;
   display: block;
 }
 
-.compact-section {
-  margin-bottom: 12px;     /* slightly tighter than a normal .section */
-}
 
+
+.compact-section {
+  margin-bottom: 12px;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
 /* ─────────────────────────────────────────────────────────
    Print Optimization
    ───────────────────────────────────────────────────────── */
